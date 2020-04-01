@@ -1,0 +1,19 @@
+Lexer Grading Report
+--------------------
+Date: {{ date }}
+File: {{ file_name }}
+Preview:
+    - Student total:  {{ stu_total }}
+    - Gold total:     {{ gold_total }}
+    - correct:        {{ correct_num }}/{{ stu_total }}
+    - error:          {{ error_num }}/{{ stu_total }}
+    - redundant:      {{ redundant_num }}/{{ stu_total }}
+    - missing:        {{ missing_num }}/{{ gold_total }}
+
+Detail:
+{% for unit in units %}
+    {{ loop.index }}. [{{ unit.status }}] - Token({{ unit.stu_token.type.cdata }})
+    {% for msg in unit.msgs %}
+        - {{ msg }}
+    {% endfor %}
+{% endfor %}
