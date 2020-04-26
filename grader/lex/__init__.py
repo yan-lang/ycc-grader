@@ -5,6 +5,7 @@
     - 脚本假设输入XML为正确格式
 """
 import datetime
+import json
 import logging
 import os
 import subprocess
@@ -13,7 +14,7 @@ from pathlib import Path
 import untangle
 from jinja2 import Template
 
-from .util import remove_extension
+from .util import remove_extension, load_json
 from .lcs import lcs as compute_lcs
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -26,11 +27,10 @@ class LexerRunner:
     """
 
     def __init__(self, test_code_dir):
-        self.test_cases = []
-        for file_name in os.listdir(test_code_dir):
-            if file_name.startswith('.'): continue
-            self.test_cases.append(os.path.join(test_code_dir, file_name))
+        # 测试文件文件路径
+        self.test_cases = self._get_test_cases_(test_code_dir)
 
+        # 构造运行命令
         self.runner = ['java']
         # self.runner.extend(['-Djava.security.manager'])
         # self.runner.extend(['-Djava.security.policy==myapp.policy'])
@@ -43,9 +43,26 @@ class LexerRunner:
         for test_case in self.test_cases:
             logger.info('processing ' + test_case)
             base_name = remove_extension(os.path.basename(test_case))
-            subprocess.run(self.runner + [jar_path, test_case, '--target', 'lex',
-                                          '-o', os.path.join(output_dir, base_name + '.xml')])
+            cmd = self.runner + [jar_path, test_case, '--target', 'lex', '-o',
+                                 os.path.join(output_dir, base_name + '.xml')]
+            p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                 stderr=subprocess.PIPE, shell=False)
+            stdout, stderr = p.communicate(timeout=100)
+            status = {"return_code": p.returncode,
+                      "stdout": stdout.decode(encoding="utf-8", errors="strict"),
+                      "stderr": stderr.decode(encoding="utf-8", errors="strict")}
+            with open(os.path.join(output_dir, base_name + '.json'), 'w') as f:
+                json.dump(status, f)
         return output_dir
+
+    @staticmethod
+    def _get_test_cases_(test_code_dir):
+        test_cases = []
+        for file_name in os.listdir(test_code_dir):
+            if file_name.startswith('.'):
+                continue
+            test_cases.append(os.path.join(test_code_dir, file_name))
+        return test_cases
 
 
 class LexerGrader:
