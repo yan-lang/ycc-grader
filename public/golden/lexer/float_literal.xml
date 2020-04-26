@@ -1,5 +1,6 @@
 <tokens>
     <token>
+        <index>0</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
@@ -10,82 +11,90 @@
         <stop>5</stop>
     </token>
     <token>
+        <index>1</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>3.0</value>
         <line>2</line>
-        <column>2</column>
+        <column>1</column>
         <start>6</start>
         <stop>9</stop>
     </token>
     <token>
+        <index>2</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>9.812356</value>
         <line>3</line>
-        <column>2</column>
+        <column>1</column>
         <start>10</start>
         <stop>20</stop>
     </token>
     <token>
+        <index>3</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>132315.14</value>
         <line>4</line>
-        <column>2</column>
+        <column>1</column>
         <start>21</start>
         <stop>31</stop>
     </token>
     <token>
+        <index>4</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>3.21566144E8</value>
         <line>5</line>
-        <column>2</column>
+        <column>1</column>
         <start>32</start>
         <stop>45</stop>
     </token>
     <token>
+        <index>5</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>123.1</value>
         <line>6</line>
-        <column>2</column>
+        <column>1</column>
         <start>46</start>
         <stop>57</stop>
     </token>
     <token>
+        <index>6</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>0.001324</value>
         <line>7</line>
-        <column>2</column>
+        <column>1</column>
         <start>58</start>
         <stop>66</stop>
     </token>
     <token>
+        <index>7</index>
         <type>FLOAT_LIT</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>0.1230012</value>
         <line>8</line>
-        <column>2</column>
+        <column>1</column>
         <start>67</start>
         <stop>76</stop>
     </token>
     <token>
+        <index>8</index>
         <type>EOF</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>8</line>
-        <column>11</column>
+        <column>10</column>
         <start>76</start>
         <stop>76</stop>
     </token>

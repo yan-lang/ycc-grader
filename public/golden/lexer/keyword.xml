@@ -1,5 +1,6 @@
 <tokens>
     <token>
+        <index>0</index>
         <type>KW_INT</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
@@ -10,182 +11,200 @@
         <stop>3</stop>
     </token>
     <token>
+        <index>1</index>
         <type>KW_FLOAT</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>2</line>
-        <column>2</column>
+        <column>1</column>
         <start>4</start>
         <stop>9</stop>
     </token>
     <token>
+        <index>2</index>
         <type>KW_VOID</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>3</line>
-        <column>2</column>
+        <column>1</column>
         <start>10</start>
         <stop>14</stop>
     </token>
     <token>
+        <index>3</index>
         <type>KW_IF</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>4</line>
-        <column>2</column>
+        <column>1</column>
         <start>15</start>
         <stop>17</stop>
     </token>
     <token>
+        <index>4</index>
         <type>KW_ELSE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>5</line>
-        <column>2</column>
+        <column>1</column>
         <start>18</start>
         <stop>22</stop>
     </token>
     <token>
+        <index>5</index>
         <type>KW_WHILE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>6</line>
-        <column>2</column>
+        <column>1</column>
         <start>23</start>
         <stop>28</stop>
     </token>
     <token>
+        <index>6</index>
         <type>KW_CONTINUE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>7</line>
-        <column>2</column>
+        <column>1</column>
         <start>29</start>
         <stop>37</stop>
     </token>
     <token>
+        <index>7</index>
         <type>KW_BREAK</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>8</line>
-        <column>2</column>
+        <column>1</column>
         <start>38</start>
         <stop>43</stop>
     </token>
     <token>
+        <index>8</index>
         <type>KW_RETURN</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>9</line>
-        <column>2</column>
+        <column>1</column>
         <start>44</start>
         <stop>50</stop>
     </token>
     <token>
+        <index>9</index>
         <type>KW_INT</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>10</line>
-        <column>2</column>
+        <column>1</column>
         <start>51</start>
         <stop>54</stop>
     </token>
     <token>
+        <index>10</index>
         <type>KW_FLOAT</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>10</line>
-        <column>6</column>
+        <column>5</column>
         <start>55</start>
         <stop>60</stop>
     </token>
     <token>
+        <index>11</index>
         <type>KW_VOID</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>10</line>
-        <column>12</column>
+        <column>11</column>
         <start>61</start>
         <stop>65</stop>
     </token>
     <token>
+        <index>12</index>
         <type>KW_IF</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>11</line>
-        <column>2</column>
+        <column>1</column>
         <start>66</start>
         <stop>68</stop>
     </token>
     <token>
+        <index>13</index>
         <type>KW_ELSE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>11</line>
-        <column>5</column>
+        <column>4</column>
         <start>69</start>
         <stop>73</stop>
     </token>
     <token>
+        <index>14</index>
         <type>KW_WHILE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>12</line>
-        <column>2</column>
+        <column>1</column>
         <start>74</start>
         <stop>79</stop>
     </token>
     <token>
+        <index>15</index>
         <type>KW_CONTINUE</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>12</line>
-        <column>8</column>
+        <column>7</column>
         <start>80</start>
         <stop>88</stop>
     </token>
     <token>
+        <index>16</index>
         <type>KW_BREAK</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>12</line>
-        <column>17</column>
+        <column>16</column>
         <start>89</start>
         <stop>94</stop>
     </token>
     <token>
+        <index>17</index>
         <type>KW_RETURN</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>13</line>
-        <column>2</column>
+        <column>1</column>
         <start>95</start>
         <stop>101</stop>
     </token>
     <token>
+        <index>18</index>
         <type>EOF</type>
         <source>keyword.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>13</line>
-        <column>8</column>
+        <column>7</column>
         <start>101</start>
         <stop>101</stop>
     </token>

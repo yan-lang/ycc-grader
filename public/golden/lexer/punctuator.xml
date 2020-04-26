@@ -1,5 +1,6 @@
 <tokens>
     <token>
+        <index>0</index>
         <type>ADD</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
@@ -10,342 +11,376 @@
         <stop>1</stop>
     </token>
     <token>
+        <index>1</index>
         <type>MINUS</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>2</line>
-        <column>2</column>
+        <column>1</column>
         <start>2</start>
         <stop>3</stop>
     </token>
     <token>
+        <index>2</index>
         <type>MULTI</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>3</line>
-        <column>2</column>
+        <column>1</column>
         <start>4</start>
         <stop>5</stop>
     </token>
     <token>
+        <index>3</index>
         <type>DIV</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>4</line>
-        <column>2</column>
+        <column>1</column>
         <start>6</start>
         <stop>7</stop>
     </token>
     <token>
+        <index>4</index>
         <type>GT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>5</line>
-        <column>2</column>
+        <column>1</column>
         <start>8</start>
         <stop>9</stop>
     </token>
     <token>
+        <index>5</index>
         <type>GTE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>6</line>
-        <column>2</column>
+        <column>1</column>
         <start>10</start>
         <stop>12</stop>
     </token>
     <token>
+        <index>6</index>
         <type>GT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>7</line>
-        <column>2</column>
+        <column>1</column>
         <start>13</start>
         <stop>14</stop>
     </token>
     <token>
+        <index>7</index>
         <type>LT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>8</line>
-        <column>2</column>
+        <column>1</column>
         <start>15</start>
         <stop>16</stop>
     </token>
     <token>
+        <index>8</index>
         <type>LTE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>9</line>
-        <column>2</column>
+        <column>1</column>
         <start>17</start>
         <stop>19</stop>
     </token>
     <token>
-        <type>ASSIGN</type>
+        <index>9</index>
+        <type>EQ</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>10</line>
-        <column>2</column>
+        <column>1</column>
         <start>20</start>
         <stop>22</stop>
     </token>
     <token>
+        <index>10</index>
         <type>UNKNOWN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>11</line>
-        <column>2</column>
+        <column>1</column>
         <start>23</start>
         <stop>24</stop>
     </token>
     <token>
+        <index>11</index>
         <type>LPAREN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>12</line>
-        <column>2</column>
+        <column>1</column>
         <start>25</start>
         <stop>26</stop>
     </token>
     <token>
+        <index>12</index>
         <type>RPAREN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>13</line>
-        <column>2</column>
+        <column>1</column>
         <start>27</start>
         <stop>28</stop>
     </token>
     <token>
+        <index>13</index>
         <type>LBRACE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>14</line>
-        <column>2</column>
+        <column>1</column>
         <start>29</start>
         <stop>30</stop>
     </token>
     <token>
+        <index>14</index>
         <type>RBRACE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>15</line>
-        <column>2</column>
+        <column>1</column>
         <start>31</start>
         <stop>32</stop>
     </token>
     <token>
-        <type>COLON</type>
+        <index>15</index>
+        <type>SEMICOLON</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>16</line>
-        <column>2</column>
+        <column>1</column>
         <start>33</start>
         <stop>34</stop>
     </token>
     <token>
+        <index>16</index>
         <type>COMMA</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>17</line>
-        <column>2</column>
+        <column>1</column>
         <start>35</start>
         <stop>36</stop>
     </token>
     <token>
+        <index>17</index>
         <type>ADD</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>2</column>
+        <column>1</column>
         <start>37</start>
         <stop>38</stop>
     </token>
     <token>
+        <index>18</index>
         <type>MINUS</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>3</column>
+        <column>2</column>
         <start>38</start>
         <stop>39</stop>
     </token>
     <token>
+        <index>19</index>
         <type>MULTI</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>4</column>
+        <column>3</column>
         <start>39</start>
         <stop>40</stop>
     </token>
     <token>
+        <index>20</index>
         <type>DIV</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>5</column>
+        <column>4</column>
         <start>40</start>
         <stop>41</stop>
     </token>
     <token>
+        <index>21</index>
         <type>GT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>6</column>
+        <column>5</column>
         <start>41</start>
         <stop>42</stop>
     </token>
     <token>
+        <index>22</index>
         <type>GTE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>7</column>
+        <column>6</column>
         <start>42</start>
         <stop>44</stop>
     </token>
     <token>
+        <index>23</index>
         <type>GT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>9</column>
+        <column>8</column>
         <start>44</start>
         <stop>45</stop>
     </token>
     <token>
+        <index>24</index>
         <type>LT</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>10</column>
+        <column>9</column>
         <start>45</start>
         <stop>46</stop>
     </token>
     <token>
+        <index>25</index>
         <type>LTE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>11</column>
+        <column>10</column>
         <start>46</start>
         <stop>48</stop>
     </token>
     <token>
-        <type>ASSIGN</type>
+        <index>26</index>
+        <type>EQ</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>13</column>
+        <column>12</column>
         <start>48</start>
         <stop>50</stop>
     </token>
     <token>
+        <index>27</index>
         <type>UNKNOWN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>15</column>
+        <column>14</column>
         <start>50</start>
         <stop>51</stop>
     </token>
     <token>
+        <index>28</index>
         <type>LPAREN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>16</column>
+        <column>15</column>
         <start>51</start>
         <stop>52</stop>
     </token>
     <token>
+        <index>29</index>
         <type>RPAREN</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>17</column>
+        <column>16</column>
         <start>52</start>
         <stop>53</stop>
     </token>
     <token>
+        <index>30</index>
         <type>LBRACE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>18</column>
+        <column>17</column>
         <start>53</start>
         <stop>54</stop>
     </token>
     <token>
+        <index>31</index>
         <type>RBRACE</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>19</column>
+        <column>18</column>
         <start>54</start>
         <stop>55</stop>
     </token>
     <token>
-        <type>COLON</type>
+        <index>32</index>
+        <type>SEMICOLON</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>20</column>
+        <column>19</column>
         <start>55</start>
         <stop>56</stop>
     </token>
     <token>
+        <index>33</index>
         <type>COMMA</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>21</column>
+        <column>20</column>
         <start>56</start>
         <stop>57</stop>
     </token>
     <token>
+        <index>34</index>
         <type>EOF</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
         <line>18</line>
-        <column>22</column>
+        <column>21</column>
         <start>57</start>
         <stop>57</stop>
     </token>
