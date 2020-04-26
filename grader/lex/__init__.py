@@ -150,7 +150,7 @@ class LexerGrader:
 
         def cmp_property(stu, gold, name, msg_factory):
             if stu != gold:
-                msgs.append(msg_factory("expect {0}={1}, got {0}={2}".format(name, stu.cdata, gold.cdata)))
+                msgs.append(msg_factory("expect {0}={1}, got {0}={2}".format(name, gold.cdata, stu.cdata)))
                 return 1
             return 0
 
