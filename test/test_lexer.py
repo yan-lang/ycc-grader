@@ -2,8 +2,8 @@ import unittest
 
 import untangle
 
-from lex import LexerGrader, LexerRunner
-from lex.lcs import lcs
+from grader.lex import LexerGrader, LexerRunner
+from grader.lex.lcs import lcs
 
 
 class RunnerTestCase(unittest.TestCase):

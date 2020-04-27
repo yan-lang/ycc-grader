@@ -3,7 +3,7 @@ import os
 
 from jinja2 import Template
 from pathlib import Path
-from common.report import AbstractReport
+from ..common.report import AbstractReport
 
 
 class AnalysisUnit:

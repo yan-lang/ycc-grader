@@ -11,9 +11,9 @@ import subprocess
 
 import untangle
 
-from common.report import ErrorReport
+from ..common.report import ErrorReport
 from .lcs import lcs as compute_lcs
-from common.util import remove_extension, load_json
+from ..common.util import remove_extension, load_json
 from .report import AnalysisUnit, LexerReport, Message
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
