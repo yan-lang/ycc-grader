@@ -64,6 +64,8 @@ class LexerRunner:
 
 
 class LexerGrader:
+    ERROR_CODE = 1
+    SUCCESS_CODE = 0
 
     def __init__(self, test_code_dir, test_gold_dir):
         self.test_code_dir = test_code_dir
@@ -90,9 +92,13 @@ class LexerGrader:
         for out_name in os.listdir(self.test_gold_dir):
             if not out_name.endswith('.xml'):
                 continue
-            stu_out_path = os.path.join(lex_out_dir, out_name)
-            gold_out_path = os.path.join(self.test_gold_dir, out_name)
-            reports.append(self.grade_single(stu_out_path, gold_out_path))
+            status = load_json(os.path.join(lex_out_dir, out_name[:-4] + '.json'))
+            if status['return_code'] != 0:
+                reports.append((LexerGrader.ERROR_CODE, status))
+            else:
+                stu_out_path = os.path.join(lex_out_dir, out_name)
+                gold_out_path = os.path.join(self.test_gold_dir, out_name)
+                reports.append((LexerGrader.SUCCESS_CODE, self.grade_single(stu_out_path, gold_out_path)))
 
         return reports
 
