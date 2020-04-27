@@ -11,6 +11,7 @@ import subprocess
 
 import untangle
 
+from common.report import ErrorReport
 from .lcs import lcs as compute_lcs
 from common.util import remove_extension, load_json
 from .report import AnalysisUnit, LexerReport, Message
@@ -94,11 +95,14 @@ class LexerGrader:
                 continue
             status = load_json(os.path.join(lex_out_dir, out_name[:-4] + '.json'))
             if status['return_code'] != 0:
-                reports.append((LexerGrader.ERROR_CODE, status))
+                reports.append(ErrorReport(os.path.basename(solution_path), out_name,
+                                           LexerReport.TOTAL_GRADE, status["stderr"]))
             else:
                 stu_out_path = os.path.join(lex_out_dir, out_name)
                 gold_out_path = os.path.join(self.test_gold_dir, out_name)
-                reports.append((LexerGrader.SUCCESS_CODE, self.grade_single(stu_out_path, gold_out_path)))
+                report = self.grade_single(stu_out_path, gold_out_path)
+                report.submitted_file = os.path.basename(solution_path)
+                reports.append(report)
 
         return reports
 

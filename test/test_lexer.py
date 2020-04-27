@@ -29,11 +29,8 @@ class LexerTestCase(unittest.TestCase):
     def test_run(self):
         grader = LexerGrader('../public/code/lexer', '../public/golden/lexer')
         reports = grader.run('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-bad.jar')
-        for return_code, report in reports:
-            if return_code == LexerGrader.SUCCESS_CODE:
-                print(report.render())
-            else:
-                print(report["stderr"])
+        for report in reports:
+            print(report.detail)
 
 
 class LCSTestCase(unittest.TestCase):

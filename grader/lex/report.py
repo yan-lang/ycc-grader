@@ -3,6 +3,7 @@ import os
 
 from jinja2 import Template
 from pathlib import Path
+from common.report import AbstractReport
 
 
 class AnalysisUnit:
@@ -55,7 +56,10 @@ class Message:
         return self.type + ': ' + self.msg
 
 
-class LexerReport:
+class LexerReport(AbstractReport):
+
+    TOTAL_GRADE = 100
+
     def __init__(self, file_name, stu_tokens, gold_tokens, analysis_result):
         self.analysis_result = analysis_result
         self.gold_tokens = gold_tokens
@@ -66,6 +70,7 @@ class LexerReport:
         self.error_num = 0
         self.redundant_num = 0
         self.missing_num = 0
+        self.submitted_file = ""
 
         for unit in analysis_result:
             if unit.status == AnalysisUnit.CORRECT: self.correct_num += 1
@@ -92,4 +97,16 @@ class LexerReport:
 
     @property
     def total_grade(self):
-        return 100
+        return LexerReport.TOTAL_GRADE
+
+    @property
+    def submitted_file_name(self):
+        return ""
+
+    @property
+    def report_name(self):
+        return self.file_name
+
+    @property
+    def detail(self):
+        return self.render()
