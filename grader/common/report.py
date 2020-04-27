@@ -5,11 +5,6 @@ class AbstractReport(ABC):
 
     @property
     @abstractmethod
-    def submitted_file_name(self):
-        pass
-
-    @property
-    @abstractmethod
     def report_name(self):
         pass
 
@@ -31,15 +26,10 @@ class AbstractReport(ABC):
 
 class ErrorReport(AbstractReport):
 
-    def __init__(self, submitted_file, report_name, total_grade, error_msg):
-        self._submitted_file = submitted_file
+    def __init__(self, report_name, total_grade, error_msg):
         self._report_name = report_name
         self._error_msg = error_msg
         self._total_grade = total_grade
-
-    @property
-    def submitted_file_name(self):
-        return self._submitted_file
 
     @property
     def report_name(self):

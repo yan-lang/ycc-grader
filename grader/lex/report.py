@@ -57,7 +57,6 @@ class Message:
 
 
 class LexerReport(AbstractReport):
-
     TOTAL_GRADE = 100
 
     def __init__(self, file_name, stu_tokens, gold_tokens, analysis_result):
@@ -70,7 +69,6 @@ class LexerReport(AbstractReport):
         self.error_num = 0
         self.redundant_num = 0
         self.missing_num = 0
-        self.submitted_file = ""
 
         for unit in analysis_result:
             if unit.status == AnalysisUnit.CORRECT: self.correct_num += 1
@@ -98,10 +96,6 @@ class LexerReport(AbstractReport):
     @property
     def total_grade(self):
         return LexerReport.TOTAL_GRADE
-
-    @property
-    def submitted_file_name(self):
-        return ""
 
     @property
     def report_name(self):
