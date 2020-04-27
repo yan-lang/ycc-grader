@@ -4,71 +4,31 @@
 
     - 脚本假设输入XML为正确格式
 """
-import json
 import logging
 import os
-import subprocess
 
 import untangle
 
-from ..common.report import ErrorReport
 from .lcs import lcs as compute_lcs
-from ..common.util import remove_extension, load_json
 from .report import AnalysisUnit, LexerReport, Message
+from ..common import Runner
+from ..common.report import ErrorReport
+from ..common.util import load_json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Lexer Grader")
 
 
-class LexerRunner:
-    """
-    Runner负责执行程序并得到输出
-    """
+class LexerRunner(Runner):
 
-    def __init__(self, test_code_dir):
-        # 测试文件文件路径
-        self.test_cases = self._get_test_cases_(test_code_dir)
+    def get_output_dir_name(self):
+        return "lex_out"
 
-        # 构造运行命令
-        self.runner = ['java']
-        # self.runner.extend(['-Djava.security.manager'])
-        # self.runner.extend(['-Djava.security.policy==myapp.policy'])
-        self.runner.extend(['--enable-preview', '-jar'])
+    def get_target(self):
+        return "lex"
 
-    def run(self, jar_path, out_dir):
-        output_dir = os.path.join(out_dir, 'lex_out')
-        os.makedirs(output_dir, exist_ok=True)
-
-        for test_case in self.test_cases:
-            logger.info('processing ' + test_case)
-            base_name = remove_extension(os.path.basename(test_case))
-            cmd = self.runner + [jar_path, test_case, '--target', 'lex', '-o',
-                                 os.path.join(output_dir, base_name + '.xml')]
-            p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                 stderr=subprocess.PIPE, shell=False)
-            try:
-                stdout, stderr = p.communicate(timeout=10)
-                status = {"return_code": p.returncode,
-                          "stdout": stdout.decode(encoding="utf-8", errors="strict"),
-                          "stderr": stderr.decode(encoding="utf-8", errors="strict")}
-            except subprocess.TimeoutExpired:
-                p.kill()
-                status = {"return_code": 1,
-                          "stdout": "",
-                          "stderr": "time out"}
-
-            with open(os.path.join(output_dir, base_name + '.json'), 'w') as f:
-                json.dump(status, f)
-        return output_dir
-
-    @staticmethod
-    def _get_test_cases_(test_code_dir):
-        test_cases = []
-        for file_name in os.listdir(test_code_dir):
-            if file_name.startswith('.'):
-                continue
-            test_cases.append(os.path.join(test_code_dir, file_name))
-        return test_cases
+    def get_output_extension(self):
+        return "xml"
 
 
 class LexerGrader:
@@ -78,7 +38,7 @@ class LexerGrader:
     def __init__(self, test_code_dir, test_gold_dir):
         self.test_code_dir = test_code_dir
         self.test_gold_dir = test_gold_dir
-        self.lexer_runner = LexerRunner(test_code_dir)
+        self.lexer_runner = LexerRunner(test_code_dir, logger)
 
     def run(self, solution_path: str):
         """
