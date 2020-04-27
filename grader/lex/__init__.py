@@ -46,10 +46,17 @@ class LexerRunner:
                                  os.path.join(output_dir, base_name + '.xml')]
             p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE, shell=False)
-            stdout, stderr = p.communicate(timeout=100)
-            status = {"return_code": p.returncode,
-                      "stdout": stdout.decode(encoding="utf-8", errors="strict"),
-                      "stderr": stderr.decode(encoding="utf-8", errors="strict")}
+            try:
+                stdout, stderr = p.communicate(timeout=10)
+                status = {"return_code": p.returncode,
+                          "stdout": stdout.decode(encoding="utf-8", errors="strict"),
+                          "stderr": stderr.decode(encoding="utf-8", errors="strict")}
+            except subprocess.TimeoutExpired:
+                p.kill()
+                status = {"return_code": 1,
+                          "stdout": "",
+                          "stderr": "time out"}
+
             with open(os.path.join(output_dir, base_name + '.json'), 'w') as f:
                 json.dump(status, f)
         return output_dir
