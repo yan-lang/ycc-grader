@@ -9,7 +9,7 @@ import os
 
 import untangle
 
-from .lcs import lcs as compute_lcs
+from grader.common.lcs import lcs as compute_lcs
 from .report import AnalysisUnit, LexerReport, Message
 from ..common import Runner
 from ..common.report import ErrorReport
