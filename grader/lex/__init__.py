@@ -32,8 +32,6 @@ class LexerRunner(Runner):
 
 
 class LexerGrader:
-    ERROR_CODE = 1
-    SUCCESS_CODE = 0
 
     def __init__(self, test_code_dir, test_gold_dir):
         self.test_code_dir = test_code_dir
