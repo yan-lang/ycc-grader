@@ -9,9 +9,9 @@ import os
 
 import untangle
 
-from grader.common.lcs import lcs as compute_lcs
 from .report import AnalysisUnit, LexerReport, Message
-from ..common import Runner
+from ..common import BaseRunner, BaseGrader
+from ..common.lcs import lcs as compute_lcs
 from ..common.report import ErrorReport
 from ..common.util import load_json
 
@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger("Lexer Grader")
 
 
-class LexerRunner(Runner):
+class LexerRunner(BaseRunner):
 
     def get_output_dir_name(self):
         return "lex_out"
@@ -31,27 +31,27 @@ class LexerRunner(Runner):
         return "xml"
 
 
-class LexerGrader:
+class LexerGrader(BaseGrader):
 
     def __init__(self, test_code_dir, test_gold_dir):
         self.test_code_dir = test_code_dir
         self.test_gold_dir = test_gold_dir
         self.lexer_runner = LexerRunner(test_code_dir, logger)
 
-    def run(self, solution_path: str):
+    def grade(self, submitted_file):
         """
         Grade a solution
-        :param solution_path: the absolute path of the solution (.jar or .zip)
+        :param submitted_file: the absolute path of the solution (.jar or .zip)
         :return: 
         """""
-        if not solution_path.endswith(('.jar', '.zip')):
+        if not submitted_file.endswith(('.jar', '.zip')):
             raise ValueError('only jar and zip are accepted for grading')
 
         # Compiler if necessary
 
         # Run lexer to get output
-        output_dir = os.path.dirname(solution_path)
-        lex_out_dir = self.lexer_runner.run(solution_path, output_dir)
+        output_dir = os.path.dirname(submitted_file)
+        lex_out_dir = self.lexer_runner.run(submitted_file, output_dir)
 
         # Grade output
         reports = []

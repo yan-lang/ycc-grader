@@ -75,3 +75,10 @@ class BaseRunner(ABC):
     @abstractmethod
     def get_output_extension(self):
         pass
+
+
+class BaseGrader(ABC):
+
+    @abstractmethod
+    def grade(self, submitted_file):
+        pass

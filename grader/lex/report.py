@@ -3,7 +3,7 @@ import os
 
 from jinja2 import Template
 from pathlib import Path
-from ..common.report import AbstractReport
+from ..common.report import BaseReport
 
 
 class AnalysisUnit:
@@ -56,7 +56,7 @@ class Message:
         return self.type + ': ' + self.msg
 
 
-class LexerReport(AbstractReport):
+class LexerReport(BaseReport):
     TOTAL_GRADE = 100
 
     def __init__(self, file_name, stu_tokens, gold_tokens, analysis_result):
