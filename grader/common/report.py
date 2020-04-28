@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class AbstractReport(ABC):
+class BaseReport(ABC):
 
     @property
     @abstractmethod
@@ -24,7 +24,7 @@ class AbstractReport(ABC):
         pass
 
 
-class ErrorReport(AbstractReport):
+class ErrorReport(BaseReport):
 
     def __init__(self, report_name, total_grade, error_msg):
         self._report_name = report_name

@@ -6,7 +6,7 @@ from .util import remove_extension
 from abc import ABC, abstractmethod
 
 
-class Runner(ABC):
+class BaseRunner(ABC):
     """
     Runner负责执行程序并得到输出
 
