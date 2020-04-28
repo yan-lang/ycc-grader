@@ -1,3 +1,4 @@
+import logging
 import unittest
 
 import untangle
@@ -8,8 +9,10 @@ from grader.common.lcs import lcs
 
 class RunnerTestCase(unittest.TestCase):
     def test_run(self):
-        runner = LexerRunner('../public/code/lexer')
-        runner.run('../solution/yan.ycc.impl-1.0-SNAPSHOT-jar-with-dependencies.jar', '../solution/out')
+        runner = LexerRunner(logging.getLogger("test_lex"))
+        runner.run('../solution/yan.ycc.impl-1.0-SNAPSHOT-jar-with-dependencies.jar',
+                   '../public/code/lexer',
+                   '../solution/out')
 
 
 class XMLTestCase(unittest.TestCase):
@@ -23,12 +26,12 @@ class LexerTestCase(unittest.TestCase):
     def test_grade_single(self):
         stu_xml = '../solution/lex_out/float_literal.xml'
         gold_xml = '../public/golden/lexer/float_literal.xml'
-        result = LexerGrader.grade_single(stu_xml, gold_xml)
+        result = LexerGrader('', '').grade_single(stu_xml, gold_xml)
         print(result.render())
 
     def test_run(self):
         grader = LexerGrader('../public/code/lexer', '../public/golden/lexer')
-        reports = grader.run('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-bad.jar')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-bad.jar')
         for report in reports:
             print(report.detail)
 

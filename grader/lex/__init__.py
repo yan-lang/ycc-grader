@@ -12,10 +12,8 @@ import untangle
 from .report import AnalysisUnit, LexerReport, Message
 from ..common import BaseRunner, BaseGrader
 from ..common.lcs import lcs as compute_lcs
-from ..common.report import ErrorReport
-from ..common.util import load_json, check_extension
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level   =logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Lexer Grader")
 
 
@@ -33,42 +31,10 @@ class LexerRunner(BaseRunner):
 
 class LexerGrader(BaseGrader):
 
-    def __init__(self, test_code_dir, test_gold_dir):
-        self.test_code_dir = test_code_dir
-        self.test_gold_dir = test_gold_dir
-        self.lexer_runner = LexerRunner(test_code_dir, logger)
+    def get_runner(self) -> BaseRunner:
+        return LexerRunner(logger)
 
-    def grade(self, submitted_file):
-        """
-        Grade a solution
-        :param submitted_file: the absolute path of the solution (.jar or .zip)
-        :return: 
-        """""
-        check_extension(submitted_file, ('.jar', '.zip'))
-
-        # Compiler if necessary
-
-        # Run lexer to get output
-        output_dir = os.path.dirname(submitted_file)
-        lex_out_dir = self.lexer_runner.run(submitted_file, output_dir)
-
-        # Grade output
-        reports = []
-        for out_name in os.listdir(self.test_gold_dir):
-            if not out_name.endswith('.xml'):
-                continue
-            status = load_json(os.path.join(lex_out_dir, out_name[:-4] + '.json'))
-            if status['return_code'] != 0:
-                reports.append(ErrorReport(out_name, LexerReport.TOTAL_GRADE, status["stderr"]))
-            else:
-                stu_out_path = os.path.join(lex_out_dir, out_name)
-                gold_out_path = os.path.join(self.test_gold_dir, out_name)
-                reports.append(self.grade_single(stu_out_path, gold_out_path))
-
-        return reports
-
-    @staticmethod
-    def grade_single(stu_xml, gold_xml):
+    def grade_single(self, stu_xml, gold_xml):
         """ 给一个文件打分
 
         :param stu_xml: 学生输出xml文件的内容

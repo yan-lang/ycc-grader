@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class BaseReport(ABC):
+    TOTAL_GRADE = 100
 
     @property
     @abstractmethod

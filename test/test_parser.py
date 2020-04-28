@@ -6,8 +6,10 @@ import logging
 
 class RunnerTestCase(unittest.TestCase):
     def test_run(self):
-        runner = ParserRunner('../public/code/parse', logging.getLogger("test_parse"))
-        runner.run('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar', '../solution')
+        runner = ParserRunner(logging.getLogger("test_parse"))
+        runner.run('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar',
+                   test_code_dir='../public/code/parse',
+                   out_dir='../solution')
 
 
 if __name__ == '__main__':

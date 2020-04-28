@@ -2,7 +2,8 @@ import json
 import os
 import subprocess
 
-from .util import remove_extension
+from .report import ErrorReport, BaseReport
+from .util import remove_extension, check_extension, load_json
 from abc import ABC, abstractmethod
 
 
@@ -15,11 +16,8 @@ class BaseRunner(ABC):
     ```
     """
 
-    def __init__(self, test_code_dir, logger):
+    def __init__(self, logger):
         self.logger = logger
-
-        # 测试文件文件路径
-        self.test_cases = self._get_test_cases_(test_code_dir)
 
         # 构造运行命令
         self.runner = ['java']
@@ -27,11 +25,14 @@ class BaseRunner(ABC):
         # self.runner.extend(['-Djava.security.policy==myapp.policy'])
         self.runner.extend(['--enable-preview', '-jar'])
 
-    def run(self, jar_path, out_dir):
+    def run(self, jar_path, test_code_dir, out_dir):
+        # 测试文件文件路径
+        test_cases = self._get_test_cases_(test_code_dir)
+
         output_dir = os.path.join(out_dir, self.get_output_dir_name())
         os.makedirs(output_dir, exist_ok=True)
 
-        for test_case in self.test_cases:
+        for test_case in test_cases:
             self.logger.info('processing ' + test_case)
 
             base_name = remove_extension(os.path.basename(test_case))
@@ -78,7 +79,36 @@ class BaseRunner(ABC):
 
 
 class BaseGrader(ABC):
+    def __init__(self, test_code_dir, test_gold_dir):
+        self.test_code_dir = test_code_dir
+        self.test_gold_dir = test_gold_dir
+        self.runner = self.get_runner()
+
+    def grade(self, submitted_file):
+        check_extension(submitted_file, ('.jar', '.zip'))
+
+        output_dir = os.path.dirname(submitted_file)
+        lex_out_dir = self.runner.run(submitted_file, self.test_code_dir, output_dir)
+
+        # Grade output
+        reports = []
+        for out_name in os.listdir(self.test_gold_dir):
+            if not out_name.endswith('.xml'):
+                continue
+            status = load_json(os.path.join(lex_out_dir, out_name[:-4] + '.json'))
+            if status['return_code'] != 0:
+                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, status["stderr"]))
+            else:
+                stu_out_path = os.path.join(lex_out_dir, out_name)
+                gold_out_path = os.path.join(self.test_gold_dir, out_name)
+                reports.append(self.grade_single(stu_out_path, gold_out_path))
+
+        return reports
 
     @abstractmethod
-    def grade(self, submitted_file):
+    def grade_single(self, stu_out, gold_out) -> BaseReport:
+        pass
+
+    @abstractmethod
+    def get_runner(self) -> BaseRunner:
         pass

@@ -57,7 +57,6 @@ class Message:
 
 
 class LexerReport(BaseReport):
-    TOTAL_GRADE = 100
 
     def __init__(self, file_name, stu_tokens, gold_tokens, analysis_result):
         self.analysis_result = analysis_result
