@@ -13,7 +13,7 @@ from .report import AnalysisUnit, LexerReport, Message
 from ..common import BaseRunner, BaseGrader
 from ..common.lcs import lcs as compute_lcs
 from ..common.report import ErrorReport
-from ..common.util import load_json
+from ..common.util import load_json, check_extension
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Lexer Grader")
@@ -44,8 +44,7 @@ class LexerGrader(BaseGrader):
         :param submitted_file: the absolute path of the solution (.jar or .zip)
         :return: 
         """""
-        if not submitted_file.endswith(('.jar', '.zip')):
-            raise ValueError('only jar and zip are accepted for grading')
+        check_extension(submitted_file, ('.jar', '.zip'))
 
         # Compiler if necessary
 
