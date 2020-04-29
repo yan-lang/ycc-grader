@@ -20,6 +20,11 @@ class ParserGraderTestCase(unittest.TestCase):
         report = grader.grade_single(stu_xml, gold_xml)
         print(report.detail)
 
+    def test_all(self):
+        grader = ParserGrader('../public/code/parse', '../public/golden/parse')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-bad.jar')
+        for report in reports:
+            print(report.detail)
 
 if __name__ == '__main__':
     unittest.main()
