@@ -1,0 +1,116 @@
+<TranslationUnit from="0" to="52">
+    <FuncDecl from="0" to="52">
+        <name>
+            <Id from="1" to="1">main</Id>
+        </name>
+        <returnType>
+            <Type from="0" to="0">INT</Type>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="4" to="52">
+                <VarDecl from="5" to="10">
+                    <name>
+                        <Id from="6" to="6">a</Id>
+                    </name>
+                    <type>
+                        <Type from="5" to="5">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="9" to="9" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl from="10" to="15">
+                    <name>
+                        <Id from="11" to="11">b</Id>
+                    </name>
+                    <type>
+                        <Type from="10" to="10">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="14" to="14" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <IfStmt from="15" to="36">
+                    <cond>
+                        <BinaryExpr op="GT" from="17" to="22">
+                            <lhs>
+                                <BinaryExpr op="ADD" from="17" to="20">
+                                    <lhs>
+                                        <Id from="18" to="18">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <Id from="20" to="20">b</Id>
+                                    </rhs>
+                                </BinaryExpr>
+                            </lhs>
+                            <rhs>
+                                <Literal from="22" to="22" type="INT">0</Literal>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <thenBody>
+                        <Block from="23" to="29">
+                            <ExprStmt from="24" to="28">
+                                <BinaryExpr op="ASSIGN" from="24" to="27">
+                                    <lhs>
+                                        <Id from="25" to="25">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <Id from="27" to="27">b</Id>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                        </Block>
+                    </thenBody>
+                    <elseBody>
+                        <Block from="30" to="36">
+                            <ExprStmt from="31" to="35">
+                                <BinaryExpr op="ASSIGN" from="31" to="34">
+                                    <lhs>
+                                        <Id from="32" to="32">b</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <Id from="34" to="34">a</Id>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                        </Block>
+                    </elseBody>
+                </IfStmt>
+                <IfStmt from="36" to="48">
+                    <cond>
+                        <BinaryExpr op="GT" from="38" to="41">
+                            <lhs>
+                                <Id from="39" to="39">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Id from="41" to="41">b</Id>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <thenBody>
+                        <Block from="42" to="48">
+                            <ExprStmt from="43" to="47">
+                                <BinaryExpr op="ASSIGN" from="43" to="46">
+                                    <lhs>
+                                        <Id from="44" to="44">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <Id from="46" to="46">b</Id>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                        </Block>
+                    </thenBody>
+                </IfStmt>
+                <ReturnStmt from="48" to="51">
+                    <value>
+                        <Literal from="50" to="50" type="INT">0</Literal>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

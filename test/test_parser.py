@@ -22,7 +22,7 @@ class ParserGraderTestCase(unittest.TestCase):
 
     def test_all(self):
         grader = ParserGrader('../public/code/parse', '../public/golden/parse')
-        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-bad.jar')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
         for report in reports:
             print(report.detail)
 

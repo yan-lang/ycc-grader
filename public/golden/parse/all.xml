@@ -1,0 +1,101 @@
+<TranslationUnit from="0" to="40">
+    <FuncDecl from="0" to="16">
+        <name>
+            <Id from="1" to="1">add</Id>
+        </name>
+        <returnType>
+            <Type from="0" to="0">INT</Type>
+        </returnType>
+        <params>
+            <param>
+                <VarDecl from="0" to="5">
+                    <name>
+                        <Id from="4" to="4">a</Id>
+                    </name>
+                    <type>
+                        <Type from="3" to="3">INT</Type>
+                    </type>
+                </VarDecl>
+            </param>
+            <param>
+                <VarDecl from="0" to="8">
+                    <name>
+                        <Id from="7" to="7">b</Id>
+                    </name>
+                    <type>
+                        <Type from="6" to="6">INT</Type>
+                    </type>
+                </VarDecl>
+            </param>
+        </params>
+        <body>
+            <Block from="9" to="16">
+                <ReturnStmt from="10" to="15">
+                    <value>
+                        <BinaryExpr op="ADD" from="11" to="14">
+                            <lhs>
+                                <Id from="12" to="12">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Id from="14" to="14">b</Id>
+                            </rhs>
+                        </BinaryExpr>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+    <FuncDecl from="16" to="40">
+        <name>
+            <Id from="17" to="17">main</Id>
+        </name>
+        <returnType>
+            <Type from="16" to="16">INT</Type>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="20" to="40">
+                <VarDecl from="21" to="26">
+                    <name>
+                        <Id from="22" to="22">a</Id>
+                    </name>
+                    <type>
+                        <Type from="21" to="21">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="25" to="25" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl from="26" to="31">
+                    <name>
+                        <Id from="27" to="27">b</Id>
+                    </name>
+                    <type>
+                        <Type from="26" to="26">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="30" to="30" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <ReturnStmt from="31" to="39">
+                    <value>
+                        <FunCall from="32" to="38">
+                            <funcName>
+                                <Id from="33" to="33">add</Id>
+                            </funcName>
+                            <args>
+                                <arg>
+                                    <Id from="35" to="35">a</Id>
+                                </arg>
+                                <arg>
+                                    <Id from="37" to="37">b</Id>
+                                </arg>
+                            </args>
+                        </FunCall>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

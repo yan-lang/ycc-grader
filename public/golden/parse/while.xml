@@ -1,0 +1,102 @@
+<TranslationUnit from="0" to="46">
+    <FuncDecl from="0" to="46">
+        <name>
+            <Id from="1" to="1">main</Id>
+        </name>
+        <returnType>
+            <Type from="0" to="0">INT</Type>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="4" to="46">
+                <VarDecl from="5" to="10">
+                    <name>
+                        <Id from="6" to="6">a</Id>
+                    </name>
+                    <type>
+                        <Type from="5" to="5">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="9" to="9" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <WhileStmt from="10" to="26">
+                    <cond>
+                        <BinaryExpr op="GT" from="12" to="15">
+                            <lhs>
+                                <Id from="13" to="13">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Literal from="15" to="15" type="INT">0</Literal>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <body>
+                        <Block from="16" to="26">
+                            <ExprStmt from="17" to="23">
+                                <BinaryExpr op="ASSIGN" from="17" to="22">
+                                    <lhs>
+                                        <Id from="18" to="18">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <BinaryExpr op="MINUS" from="19" to="22">
+                                            <lhs>
+                                                <Id from="20" to="20">a</Id>
+                                            </lhs>
+                                            <rhs>
+                                                <Literal from="22" to="22" type="INT">1</Literal>
+                                            </rhs>
+                                        </BinaryExpr>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                            <BreakStmt from="24" to="25">
+                            </BreakStmt>
+                        </Block>
+                    </body>
+                </WhileStmt>
+                <WhileStmt from="26" to="42">
+                    <cond>
+                        <BinaryExpr op="GT" from="28" to="31">
+                            <lhs>
+                                <Id from="29" to="29">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Literal from="31" to="31" type="INT">0</Literal>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <body>
+                        <Block from="32" to="42">
+                            <ExprStmt from="33" to="39">
+                                <BinaryExpr op="ASSIGN" from="33" to="38">
+                                    <lhs>
+                                        <Id from="34" to="34">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <BinaryExpr op="MINUS" from="35" to="38">
+                                            <lhs>
+                                                <Id from="36" to="36">a</Id>
+                                            </lhs>
+                                            <rhs>
+                                                <Literal from="38" to="38" type="INT">1</Literal>
+                                            </rhs>
+                                        </BinaryExpr>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                            <ContinueStmt from="40" to="41">
+                            </ContinueStmt>
+                        </Block>
+                    </body>
+                </WhileStmt>
+                <ReturnStmt from="42" to="45">
+                    <value>
+                        <Literal from="44" to="44" type="INT">0</Literal>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

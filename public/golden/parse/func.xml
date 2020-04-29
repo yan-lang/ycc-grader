@@ -1,0 +1,67 @@
+<TranslationUnit from="0" to="25">
+    <FuncDecl from="0" to="9">
+        <name>
+            <Id from="1" to="1">main</Id>
+        </name>
+        <returnType>
+            <Type from="0" to="0">INT</Type>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="4" to="9">
+                <ReturnStmt from="5" to="8">
+                    <value>
+                        <Literal from="7" to="7" type="INT">0</Literal>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+    <FuncDecl from="9" to="25">
+        <name>
+            <Id from="10" to="10">add</Id>
+        </name>
+        <returnType>
+            <Type from="9" to="9">INT</Type>
+        </returnType>
+        <params>
+            <param>
+                <VarDecl from="0" to="14">
+                    <name>
+                        <Id from="13" to="13">x</Id>
+                    </name>
+                    <type>
+                        <Type from="12" to="12">INT</Type>
+                    </type>
+                </VarDecl>
+            </param>
+            <param>
+                <VarDecl from="0" to="17">
+                    <name>
+                        <Id from="16" to="16">y</Id>
+                    </name>
+                    <type>
+                        <Type from="15" to="15">INT</Type>
+                    </type>
+                </VarDecl>
+            </param>
+        </params>
+        <body>
+            <Block from="18" to="25">
+                <ReturnStmt from="19" to="24">
+                    <value>
+                        <BinaryExpr op="ADD" from="20" to="23">
+                            <lhs>
+                                <Id from="21" to="21">x</Id>
+                            </lhs>
+                            <rhs>
+                                <Id from="23" to="23">y</Id>
+                            </rhs>
+                        </BinaryExpr>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

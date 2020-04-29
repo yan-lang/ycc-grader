@@ -1,0 +1,214 @@
+<TranslationUnit from="0" to="83">
+    <FuncDecl from="0" to="83">
+        <name>
+            <Id from="1" to="1">main</Id>
+        </name>
+        <returnType>
+            <Type from="0" to="0">INT</Type>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="4" to="83">
+                <VarDecl from="5" to="10">
+                    <name>
+                        <Id from="6" to="6">a</Id>
+                    </name>
+                    <type>
+                        <Type from="5" to="5">INT</Type>
+                    </type>
+                    <init>
+                        <Literal from="9" to="9" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl from="10" to="15">
+                    <name>
+                        <Id from="11" to="11">b</Id>
+                    </name>
+                    <type>
+                        <Type from="10" to="10">FLOAT</Type>
+                    </type>
+                    <init>
+                        <Literal from="14" to="14" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <ExprStmt from="15" to="19">
+                    <BinaryExpr op="ADD" from="15" to="18">
+                        <lhs>
+                            <Id from="16" to="16">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="18" to="18">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="19" to="27">
+                    <BinaryExpr op="ADD" from="19" to="26">
+                        <lhs>
+                            <BinaryExpr op="ADD" from="19" to="24">
+                                <lhs>
+                                    <BinaryExpr op="ADD" from="19" to="22">
+                                        <lhs>
+                                            <Id from="20" to="20">a</Id>
+                                        </lhs>
+                                        <rhs>
+                                            <Id from="22" to="22">b</Id>
+                                        </rhs>
+                                    </BinaryExpr>
+                                </lhs>
+                                <rhs>
+                                    <Id from="24" to="24">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal from="26" to="26" type="INT">9</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="27" to="35">
+                    <BinaryExpr op="ADD" from="27" to="34">
+                        <lhs>
+                            <BinaryExpr op="ADD" from="27" to="32">
+                                <lhs>
+                                    <Id from="28" to="28">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <BinaryExpr op="MULTI" from="29" to="32">
+                                        <lhs>
+                                            <Id from="30" to="30">b</Id>
+                                        </lhs>
+                                        <rhs>
+                                            <Literal from="32" to="32" type="INT">9</Literal>
+                                        </rhs>
+                                    </BinaryExpr>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal from="34" to="34" type="INT">10</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="35" to="43">
+                    <BinaryExpr op="MULTI" from="35" to="42">
+                        <lhs>
+                            <BinaryExpr op="ADD" from="36" to="39">
+                                <lhs>
+                                    <Id from="37" to="37">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Id from="39" to="39">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal from="42" to="42" type="INT">10</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="43" to="51">
+                    <BinaryExpr op="REL_OR" from="43" to="50">
+                        <lhs>
+                            <BinaryExpr op="GT" from="43" to="46">
+                                <lhs>
+                                    <Id from="44" to="44">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Id from="46" to="46">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <BinaryExpr op="LT" from="47" to="50">
+                                <lhs>
+                                    <Id from="48" to="48">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Literal from="50" to="50" type="INT">10</Literal>
+                                </rhs>
+                            </BinaryExpr>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="51" to="55">
+                    <BinaryExpr op="ASSIGN" from="51" to="54">
+                        <lhs>
+                            <Id from="52" to="52">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Literal from="54" to="54" type="INT">10</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="55" to="59">
+                    <BinaryExpr op="EQ" from="55" to="58">
+                        <lhs>
+                            <Id from="56" to="56">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="58" to="58">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="59" to="63">
+                    <BinaryExpr op="NEQ" from="59" to="62">
+                        <lhs>
+                            <Id from="60" to="60">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="62" to="62">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="63" to="67">
+                    <BinaryExpr op="GTE" from="63" to="66">
+                        <lhs>
+                            <Id from="64" to="64">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="66" to="66">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="67" to="71">
+                    <BinaryExpr op="LTE" from="67" to="70">
+                        <lhs>
+                            <Id from="68" to="68">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="70" to="70">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="71" to="75">
+                    <BinaryExpr op="GT" from="71" to="74">
+                        <lhs>
+                            <Id from="72" to="72">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="74" to="74">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="75" to="79">
+                    <BinaryExpr op="LT" from="75" to="78">
+                        <lhs>
+                            <Id from="76" to="76">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id from="78" to="78">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt from="79" to="82">
+                    <UnaryExpr op="MINUS" from="79" to="81">
+                        <arg>
+                            <Id from="81" to="81">a</Id>
+                        </arg>
+                    </UnaryExpr>
+                </ExprStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>
