@@ -2,6 +2,7 @@ import logging
 import unittest
 
 from grader.common import Runner
+from grader.semantic import SemanticGrader
 from grader.semantic.cs import ControlStructureGrader
 from grader.semantic.name import NameResolveGrader
 
@@ -29,6 +30,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_name_grader(self):
         grader = NameResolveGrader('../public/code/semantic/name', '../public/golden/semantic/name')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
+        for report in reports:
+            print(report.detail)
+
+    def test_semantic_grader(self):
+        grader = SemanticGrader('../public/code/semantic', '../public/golden/semantic')
         reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
         for report in reports:
             print(report.detail)

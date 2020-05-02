@@ -69,10 +69,19 @@ class Runner:
         return test_cases
 
 
-class BaseGrader(ABC):
+class Grader(ABC):
     def __init__(self, test_code_dir, test_gold_dir):
         self.test_code_dir = test_code_dir
         self.test_gold_dir = test_gold_dir
+
+    @abstractmethod
+    def grade(self, submitted_file):
+        pass
+
+
+class BaseGrader(Grader):
+    def __init__(self, test_code_dir, test_gold_dir):
+        super().__init__(test_code_dir, test_gold_dir)
         self.runner = self.get_runner()
 
     def grade(self, submitted_file):
