@@ -7,7 +7,7 @@ from .util import remove_extension, check_extension, load_json
 from abc import ABC, abstractmethod
 
 
-class BaseRunner(ABC):
+class Runner:
     """
     Runner负责执行程序并得到输出
 
@@ -16,7 +16,10 @@ class BaseRunner(ABC):
     ```
     """
 
-    def __init__(self, logger):
+    def __init__(self, target, output_dir, output_extension, logger):
+        self.target = target
+        self.output_dir = output_dir
+        self.output_extension = output_extension
         self.logger = logger
 
         # 构造运行命令
@@ -29,15 +32,15 @@ class BaseRunner(ABC):
         # 测试文件文件路径
         test_cases = self._get_test_cases_(test_code_dir)
 
-        output_dir = os.path.join(out_dir, self.get_output_dir_name())
+        output_dir = os.path.join(out_dir, self.output_dir)
         os.makedirs(output_dir, exist_ok=True)
 
         for test_case in test_cases:
             self.logger.info('processing ' + test_case)
 
             base_name = remove_extension(os.path.basename(test_case))
-            cmd = self.runner + [jar_path, test_case, '--target', self.get_target(), '-o',
-                                 os.path.join(output_dir, base_name + "." + self.get_output_extension())]
+            cmd = self.runner + [jar_path, test_case, '--target', self.target, '-o',
+                                 os.path.join(output_dir, base_name + "." + self.output_extension)]
 
             p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE, shell=False)
@@ -64,18 +67,6 @@ class BaseRunner(ABC):
                 continue
             test_cases.append(os.path.join(test_code_dir, file_name))
         return test_cases
-
-    @abstractmethod
-    def get_output_dir_name(self):
-        pass
-
-    @abstractmethod
-    def get_target(self):
-        pass
-
-    @abstractmethod
-    def get_output_extension(self):
-        pass
 
 
 class BaseGrader(ABC):
@@ -110,5 +101,5 @@ class BaseGrader(ABC):
         pass
 
     @abstractmethod
-    def get_runner(self) -> BaseRunner:
+    def get_runner(self) -> Runner:
         pass

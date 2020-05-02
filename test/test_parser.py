@@ -1,12 +1,12 @@
 import unittest
 
-from grader.parse import ParserRunner, ParserGrader
+from grader.parse import Runner, ParserGrader
 import logging
 
 
 class RunnerTestCase(unittest.TestCase):
     def test_run(self):
-        runner = ParserRunner(logging.getLogger("test_parse"))
+        runner = Runner(target='parse', output_dir='parse_out', output_extension='xml', logger=logging.getLogger('test'))
         runner.run('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar',
                    test_code_dir='../public/code/parse',
                    out_dir='../solution')

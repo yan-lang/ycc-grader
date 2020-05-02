@@ -3,13 +3,13 @@ import unittest
 
 import untangle
 
-from grader.lex import LexerGrader, LexerRunner
+from grader.lex import LexerGrader, Runner
 from grader.common.lcs import lcs
 
 
 class RunnerTestCase(unittest.TestCase):
     def test_run(self):
-        runner = LexerRunner(logging.getLogger("test_lex"))
+        runner = Runner(target='lex', output_dir='lex_out', output_extension='xml', logger=logging.getLogger('test'))
         runner.run('../solution/yan.ycc.impl-1.0-SNAPSHOT-jar-with-dependencies.jar',
                    '../public/code/lexer',
                    '../solution/out')

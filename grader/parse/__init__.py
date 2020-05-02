@@ -8,29 +8,17 @@
 import logging
 import os
 
-from ..common import BaseRunner, BaseGrader, BaseReport
+from ..common import Runner, BaseGrader, BaseReport
 from xmldiff import main, formatting
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Parser Grader")
 
 
-class ParserRunner(BaseRunner):
-
-    def get_output_dir_name(self):
-        return "parse_out"
-
-    def get_target(self):
-        return "parse"
-
-    def get_output_extension(self):
-        return "xml"
-
-
 class ParserGrader(BaseGrader):
 
-    def get_runner(self) -> BaseRunner:
-        return ParserRunner(logger)
+    def get_runner(self) -> Runner:
+        return Runner(target='parse', output_dir='parse_out', output_extension='xml', logger=logger)
 
     def grade_single(self, stu_out, gold_out) -> BaseReport:
         formatter = formatting.DiffFormatter()

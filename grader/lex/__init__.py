@@ -10,29 +10,17 @@ import os
 import untangle
 
 from .report import AnalysisUnit, LexerReport, Message
-from ..common import BaseRunner, BaseGrader
+from ..common import Runner, BaseGrader
 from ..common.lcs import lcs as compute_lcs
 
-logging.basicConfig(level   =logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Lexer Grader")
-
-
-class LexerRunner(BaseRunner):
-
-    def get_output_dir_name(self):
-        return "lex_out"
-
-    def get_target(self):
-        return "lex"
-
-    def get_output_extension(self):
-        return "xml"
 
 
 class LexerGrader(BaseGrader):
 
-    def get_runner(self) -> BaseRunner:
-        return LexerRunner(logger)
+    def get_runner(self) -> Runner:
+        return Runner(target='lex', output_dir='lex_out', output_extension='xml', logger=logger)
 
     def grade_single(self, stu_xml, gold_xml):
         """ 给一个文件打分
