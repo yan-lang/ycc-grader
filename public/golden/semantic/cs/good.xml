@@ -1,0 +1,14 @@
+<controlStructure>
+    <break>
+        <line>4</line>
+        <attachedLoop>3</attachedLoop>
+    </break>
+    <break>
+        <line>5</line>
+        <attachedLoop>3</attachedLoop>
+    </break>
+    <continue>
+        <line>6</line>
+        <attachedLoop>3</attachedLoop>
+    </continue>
+</controlStructure>

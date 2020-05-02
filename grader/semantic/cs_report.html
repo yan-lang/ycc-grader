@@ -1,0 +1,13 @@
+Control Structure Grading Report
+--------------------
+Date: {{ date }}
+Preview:
+- grade: {{ grade }}/{{ total_grade }}
+- stu_total: {{ stu_total }}
+- gold_total: {{ gold_total }}
+- correct: {{ correct_num }}/{{ stu_total }}
+
+Detail:
+{% for unit in units %}
+    {{ loop.index }}. {{ unit.status }} - {{ unit }}
+{% endfor %}
