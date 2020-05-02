@@ -5,7 +5,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from jinja2 import Template
 
-from grader.common import BaseReport, BaseGrader, Runner
+from ..common import BaseReport, BaseGrader, Runner
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("NameResolve Grader")

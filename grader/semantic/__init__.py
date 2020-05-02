@@ -6,9 +6,9 @@
 import logging
 import os
 
-from grader.common import Grader
-from grader.semantic.cs import ControlStructureGrader
-from grader.semantic.name import NameResolveGrader
+from ..common import Grader
+from .cs import ControlStructureGrader
+from .name import NameResolveGrader
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("Semantic Grader")
