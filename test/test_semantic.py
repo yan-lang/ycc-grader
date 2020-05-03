@@ -5,6 +5,7 @@ from grader.common import Runner
 from grader.semantic import SemanticGrader
 from grader.semantic.cs import ControlStructureGrader
 from grader.semantic.name import NameResolveGrader
+from grader.semantic.type import TypeCheckGrader
 
 
 class MyTestCase(unittest.TestCase):
@@ -36,6 +37,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_semantic_grader(self):
         grader = SemanticGrader('../public/code/semantic', '../public/golden/semantic')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
+        for report in reports:
+            print(report.detail)
+
+    def test_type_grader(self):
+        grader = TypeCheckGrader('../public/code/semantic/type', '../public/golden/semantic/type')
         reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
         for report in reports:
             print(report.detail)

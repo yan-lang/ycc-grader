@@ -1,0 +1,92 @@
+<TranslationUnit from="0" to="39">
+    <FuncDecl from="0" to="39">
+        <name>
+            <Id from="1" to="1">main</Id>
+        </name>
+        <returnType>
+            <PrimitiveType from="0" to="0">INT</PrimitiveType>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block from="4" to="39">
+                <VarDecl from="5" to="10">
+                    <name>
+                        <Id from="6" to="6">a</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType from="5" to="5">INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" from="9" to="9" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl from="10" to="15">
+                    <name>
+                        <Id from="11" to="11">b</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType from="10" to="10">FLOAT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" from="14" to="14" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <IfStmt from="15" to="38">
+                    <cond>
+                        <BinaryExpr evalType="bool" op="GT" from="17" to="20">
+                            <lhs>
+                                <Id evalType="int" from="18" to="18">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Literal evalType="int" from="20" to="20" type="INT">0</Literal>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <thenBody>
+                        <Block from="21" to="29">
+                            <ExprStmt from="22" to="28">
+                                <BinaryExpr evalType="int" op="ASSIGN" from="22" to="27">
+                                    <lhs>
+                                        <Id evalType="int" from="23" to="23">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <BinaryExpr evalType="int" op="ADD" from="24" to="27">
+                                            <lhs>
+                                                <Id evalType="int" from="25" to="25">a</Id>
+                                            </lhs>
+                                            <rhs>
+                                                <Id evalType="float" from="27" to="27">b</Id>
+                                            </rhs>
+                                        </BinaryExpr>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                        </Block>
+                    </thenBody>
+                    <elseBody>
+                        <Block from="30" to="38">
+                            <ExprStmt from="31" to="37">
+                                <BinaryExpr evalType="float" op="ASSIGN" from="31" to="36">
+                                    <lhs>
+                                        <Id evalType="float" from="32" to="32">b</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <BinaryExpr evalType="int" op="ADD" from="33" to="36">
+                                            <lhs>
+                                                <Id evalType="int" from="34" to="34">a</Id>
+                                            </lhs>
+                                            <rhs>
+                                                <Id evalType="float" from="36" to="36">b</Id>
+                                            </rhs>
+                                        </BinaryExpr>
+                                    </rhs>
+                                </BinaryExpr>
+                            </ExprStmt>
+                        </Block>
+                    </elseBody>
+                </IfStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

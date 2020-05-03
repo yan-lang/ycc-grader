@@ -6,6 +6,7 @@
 import logging
 import os
 
+from .type import TypeCheckGrader
 from ..common import Grader
 from .cs import ControlStructureGrader
 from .name import NameResolveGrader
@@ -20,9 +21,11 @@ class SemanticGrader(Grader):
         super().__init__(test_code_dir, test_gold_dir)
         self.cs_grader = ControlStructureGrader(os.path.join(test_code_dir, 'cs'), os.path.join(test_gold_dir, 'cs'))
         self.name_grader = NameResolveGrader(os.path.join(test_code_dir, 'name'), os.path.join(test_gold_dir, 'name'))
+        self.type_grader = TypeCheckGrader(os.path.join(test_code_dir, 'type'), os.path.join(test_gold_dir, 'type'))
 
     def grade(self, submitted_file):
         reports = []
         reports += self.cs_grader.grade(submitted_file)
         reports += self.name_grader.grade(submitted_file)
+        reports += self.type_grader.grade(submitted_file)
         return reports

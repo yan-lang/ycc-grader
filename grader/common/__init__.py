@@ -98,17 +98,14 @@ class BaseGrader(Grader):
             status = load_json(os.path.join(lex_out_dir, out_name[:-4] + '.json'))
             msg = "stdout:\n{0}\n\nstderr:\n{1}".format(status['stdout'], status["stderr"])
 
-            if status['return_code'] != 0:
-                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
-            else:
-                # return code并不可靠, 即使return code=0不一定能保证stu_out_path, gold_out_path存在
-                stu_out_path = os.path.join(lex_out_dir, out_name)
-                gold_out_path = os.path.join(self.test_gold_dir, out_name)
+            # return code并不可靠, 即使return code=0不一定能保证stu_out_path, gold_out_path存在
+            stu_out_path = os.path.join(lex_out_dir, out_name)
+            gold_out_path = os.path.join(self.test_gold_dir, out_name)
 
-                if os.path.exists(stu_out_path) and os.path.exists(gold_out_path):
-                    reports.append(self.grade_single(stu_out_path, gold_out_path))
-                else:
-                    reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
+            if os.path.exists(stu_out_path) and os.path.exists(gold_out_path):
+                reports.append(self.grade_single(stu_out_path, gold_out_path))
+            else:
+                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
 
         return reports
 
