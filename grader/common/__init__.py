@@ -30,7 +30,7 @@ class Runner:
 
     def run(self, jar_path, test_code_dir, out_dir):
         # 测试文件文件路径
-        test_cases = self._get_test_cases_(test_code_dir)
+        test_cases = listdirpath(test_code_dir, 'c')
 
         output_dir = os.path.join(out_dir, self.output_dir)
         os.makedirs(output_dir, exist_ok=True)
@@ -59,14 +59,22 @@ class Runner:
                 json.dump(status, f)
         return output_dir
 
-    @staticmethod
-    def _get_test_cases_(test_code_dir):
-        test_cases = []
-        for file_name in os.listdir(test_code_dir):
-            if file_name.startswith('.'):
-                continue
-            test_cases.append(os.path.join(test_code_dir, file_name))
-        return test_cases
+
+def listdirpath(path, ext):
+    """
+    Similar to os.listdir, but return full path rather than file name.
+
+    :param path: dir path
+    :return: list of file paths in this directory
+    """
+    file_paths = []
+    for file_name in os.listdir(path):
+        if file_name.startswith('.'):
+            continue
+        if not file_name.endswith('.'+ext):
+            continue
+        file_paths.append(os.path.join(path, file_name))
+    return file_paths
 
 
 class Grader(ABC):
