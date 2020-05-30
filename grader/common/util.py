@@ -13,4 +13,4 @@ def load_json(path: str):
 
 def check_extension(file_name, exts):
     if not file_name.endswith(exts):
-        raise ValueError('only ' + exts + ' are accepted for grading')
+        raise ValueError('only ' + str(exts) + ' are accepted for grading')
