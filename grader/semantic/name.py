@@ -56,7 +56,7 @@ class Ref:
         self.passed = False
 
     def __str__(self):
-        return "Def(line={0}, type={1},name={2}, refLine={3})".format(self.line, self.type, self.name, self.refLine)
+        return "Ref(line={0}, type={1},name={2}, refLine={3})".format(self.line, self.type, self.name, self.refLine)
 
     def __eq__(self, other):
         if type(other) != Ref:
