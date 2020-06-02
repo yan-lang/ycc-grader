@@ -4,9 +4,12 @@
 
     - 脚本假设输入XML为正确格式
 """
-
+import datetime
 import logging
 import os
+from pathlib import Path
+
+from jinja2 import Template
 
 from ..common import Runner, BaseGrader, BaseReport
 from xmldiff import main, formatting
@@ -22,15 +25,26 @@ class ParserGrader(BaseGrader):
 
     def grade_single(self, stu_out, gold_out) -> BaseReport:
         formatter = formatting.DiffFormatter()
-        diff = main.diff_files(stu_out, gold_out, formatter=formatter, diff_options={'F': 0.5})
-        return ParserReport(os.path.basename(stu_out), diff)
+        diff_text = main.diff_files(stu_out, gold_out, formatter=formatter, diff_options={'F': 0.5})
+
+        # Compute similarity
+
+        # InsertNode, DeleteNode, MoveNode,
+        # InsertAttrib, DeleteAttrib, RenameAttrib, UpdateAttrib,
+        # UpdateTextIn, UpdateTextAfter
+
+        diff = main.diff_files(stu_out, gold_out, diff_options={'F': 0.5})
+
+        return ParserReport(os.path.basename(stu_out), diff_text, 0)
 
 
 class ParserReport(BaseReport):
 
-    def __init__(self, report_name, diff):
+    def __init__(self, report_name, diff, similarity):
         self._report_name = report_name
         self.diff = diff
+        self.creation_date = datetime.datetime.now()
+        self.similarity = similarity
 
     @property
     def report_name(self):
@@ -46,4 +60,8 @@ class ParserReport(BaseReport):
 
     @property
     def detail(self):
-        return self.diff
+        with open(os.path.join(Path(__file__).parent.absolute(), 'parse_report.html'), 'r') as f:
+            template = Template(f.read(), lstrip_blocks=True, trim_blocks=True)
+            return template.render(date=self.creation_date,
+                                   status="passed" if self.grade == 100 else "not passed",
+                                   detail=self.diff if self.diff != '' else "null")
