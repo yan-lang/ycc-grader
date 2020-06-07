@@ -22,11 +22,12 @@ class Runner:
         self.output_extension = output_extension
         self.logger = logger
 
-        # 构造运行命令
-        self.runner = ['java']
+        self.vm_args = ['--enable-preview', '-jar']
         # self.runner.extend(['-Djava.security.manager'])
         # self.runner.extend(['-Djava.security.policy==myapp.policy'])
-        self.runner.extend(['--enable-preview', '-jar'])
+
+    def _cmd_(self, app_path, app_args):
+        return ['java'] + self.vm_args + [app_path] + app_args
 
     def run(self, jar_path, test_code_dir, out_dir):
         # 测试文件文件路径
@@ -39,10 +40,10 @@ class Runner:
             self.logger.info('processing ' + test_case)
 
             base_name = remove_extension(os.path.basename(test_case))
-            cmd = self.runner + [jar_path, test_case, '--target', self.target, '-o',
-                                 os.path.join(output_dir, base_name + "." + self.output_extension)]
+            app_args = [test_case, '--target', self.target, '-o',
+                        os.path.join(output_dir, base_name + "." + self.output_extension)]
 
-            p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+            p = subprocess.Popen(self._cmd_(jar_path, app_args), stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE, shell=False)
             try:
                 stdout, stderr = p.communicate(timeout=10)
@@ -71,7 +72,7 @@ def listdirpath(path, ext):
     for file_name in os.listdir(path):
         if file_name.startswith('.'):
             continue
-        if not file_name.endswith('.'+ext):
+        if not file_name.endswith('.' + ext):
             continue
         file_paths.append(os.path.join(path, file_name))
     return file_paths
