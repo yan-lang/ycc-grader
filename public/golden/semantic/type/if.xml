@@ -1,0 +1,116 @@
+<TranslationUnit>
+    <FuncDecl>
+        <name>
+            <Id>main</Id>
+        </name>
+        <returnType>
+            <PrimitiveType>INT</PrimitiveType>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block>
+                <VarDecl>
+                    <name>
+                        <Id>a</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl>
+                    <name>
+                        <Id>b</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <IfStmt>
+                    <cond>
+                        <BinaryExpr evalType="bool" op="GT">
+                            <lhs>
+                                <BinaryExpr evalType="int" op="ADD">
+                                    <lhs>
+                                        <Id evalType="int">a</Id>
+                                    </lhs>
+                                    <rhs>
+                                        <Id evalType="int">b</Id>
+                                    </rhs>
+                                </BinaryExpr>
+                            </lhs>
+                            <rhs>
+                                <Literal evalType="int" type="INT">0</Literal>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <thenBody>
+                        <Block>
+                            <ExprStmt>
+                                <AssignExpr evalType="int">
+                                    <assignee>
+                                        <Id evalType="int">a</Id>
+                                    </assignee>
+                                    <value>
+                                        <Id evalType="int">b</Id>
+                                    </value>
+                                </AssignExpr>
+                            </ExprStmt>
+                        </Block>
+                    </thenBody>
+                    <elseBody>
+                        <Block>
+                            <ExprStmt>
+                                <AssignExpr evalType="int">
+                                    <assignee>
+                                        <Id evalType="int">b</Id>
+                                    </assignee>
+                                    <value>
+                                        <Id evalType="int">a</Id>
+                                    </value>
+                                </AssignExpr>
+                            </ExprStmt>
+                        </Block>
+                    </elseBody>
+                </IfStmt>
+                <IfStmt>
+                    <cond>
+                        <BinaryExpr evalType="bool" op="GT">
+                            <lhs>
+                                <Id evalType="int">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Id evalType="int">b</Id>
+                            </rhs>
+                        </BinaryExpr>
+                    </cond>
+                    <thenBody>
+                        <Block>
+                            <ExprStmt>
+                                <AssignExpr evalType="int">
+                                    <assignee>
+                                        <Id evalType="int">a</Id>
+                                    </assignee>
+                                    <value>
+                                        <Id evalType="int">b</Id>
+                                    </value>
+                                </AssignExpr>
+                            </ExprStmt>
+                        </Block>
+                    </thenBody>
+                </IfStmt>
+                <ReturnStmt>
+                    <value>
+                        <Literal evalType="int" type="INT">0</Literal>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

@@ -1,0 +1,37 @@
+<nameResolve>
+    <def>
+        <line>1</line>
+        <type>var</type>
+        <name>a</name>
+    </def>
+    <def>
+        <line>2</line>
+        <type>var</type>
+        <name>c</name>
+    </def>
+    <def>
+        <line>3</line>
+        <type>var</type>
+        <name>d</name>
+    </def>
+    <def>
+        <line>4</line>
+        <type>var</type>
+        <name>f</name>
+    </def>
+    <def>
+        <line>5</line>
+        <type>var</type>
+        <name>e</name>
+    </def>
+    <def>
+        <line>6</line>
+        <type>var</type>
+        <name>abc</name>
+    </def>
+    <def>
+        <line>7</line>
+        <type>var</type>
+        <name>abe</name>
+    </def>
+</nameResolve>

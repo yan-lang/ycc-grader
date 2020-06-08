@@ -1,0 +1,101 @@
+<TranslationUnit>
+    <FuncDecl>
+        <name>
+            <Id>add</Id>
+        </name>
+        <returnType>
+            <PrimitiveType>INT</PrimitiveType>
+        </returnType>
+        <params>
+            <param>
+                <VarDecl>
+                    <name>
+                        <Id>a</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                </VarDecl>
+            </param>
+            <param>
+                <VarDecl>
+                    <name>
+                        <Id>b</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                </VarDecl>
+            </param>
+        </params>
+        <body>
+            <Block>
+                <ReturnStmt>
+                    <value>
+                        <BinaryExpr evalType="int" op="ADD">
+                            <lhs>
+                                <Id evalType="int">a</Id>
+                            </lhs>
+                            <rhs>
+                                <Id evalType="int">b</Id>
+                            </rhs>
+                        </BinaryExpr>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+    <FuncDecl>
+        <name>
+            <Id>main</Id>
+        </name>
+        <returnType>
+            <PrimitiveType>INT</PrimitiveType>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block>
+                <VarDecl>
+                    <name>
+                        <Id>a</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl>
+                    <name>
+                        <Id>b</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <ReturnStmt>
+                    <value>
+                        <FunCall evalType="int">
+                            <funcName>
+                                <Id>add</Id>
+                            </funcName>
+                            <args>
+                                <arg>
+                                    <Id evalType="int">a</Id>
+                                </arg>
+                                <arg>
+                                    <Id evalType="int">b</Id>
+                                </arg>
+                            </args>
+                        </FunCall>
+                    </value>
+                </ReturnStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

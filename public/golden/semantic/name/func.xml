@@ -1,0 +1,34 @@
+<nameResolve>
+    <def>
+        <line>1</line>
+        <type>func</type>
+        <name>main</name>
+    </def>
+    <def>
+        <line>6</line>
+        <type>func</type>
+        <name>add</name>
+    </def>
+    <def>
+        <line>1</line>
+        <type>var</type>
+        <name>x</name>
+    </def>
+    <def>
+        <line>1</line>
+        <type>var</type>
+        <name>y</name>
+    </def>
+    <ref>
+        <line>7</line>
+        <type>var</type>
+        <name>x</name>
+        <refLine>1</refLine>
+    </ref>
+    <ref>
+        <line>7</line>
+        <type>var</type>
+        <name>y</name>
+        <refLine>1</refLine>
+    </ref>
+</nameResolve>

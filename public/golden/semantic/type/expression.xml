@@ -1,0 +1,214 @@
+<TranslationUnit>
+    <FuncDecl>
+        <name>
+            <Id>main</Id>
+        </name>
+        <returnType>
+            <PrimitiveType>INT</PrimitiveType>
+        </returnType>
+        <params>
+        </params>
+        <body>
+            <Block>
+                <VarDecl>
+                    <name>
+                        <Id>a</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>INT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">10</Literal>
+                    </init>
+                </VarDecl>
+                <VarDecl>
+                    <name>
+                        <Id>b</Id>
+                    </name>
+                    <type>
+                        <PrimitiveType>FLOAT</PrimitiveType>
+                    </type>
+                    <init>
+                        <Literal evalType="int" type="INT">9</Literal>
+                    </init>
+                </VarDecl>
+                <ExprStmt>
+                    <BinaryExpr evalType="int" op="ADD">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="int" op="ADD">
+                        <lhs>
+                            <BinaryExpr evalType="int" op="ADD">
+                                <lhs>
+                                    <BinaryExpr evalType="int" op="ADD">
+                                        <lhs>
+                                            <Id evalType="int">a</Id>
+                                        </lhs>
+                                        <rhs>
+                                            <Id evalType="float">b</Id>
+                                        </rhs>
+                                    </BinaryExpr>
+                                </lhs>
+                                <rhs>
+                                    <Id evalType="float">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal evalType="int" type="INT">9</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="int" op="ADD">
+                        <lhs>
+                            <BinaryExpr evalType="int" op="ADD">
+                                <lhs>
+                                    <Id evalType="int">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <BinaryExpr evalType="float" op="MULTI">
+                                        <lhs>
+                                            <Id evalType="float">b</Id>
+                                        </lhs>
+                                        <rhs>
+                                            <Literal evalType="int" type="INT">9</Literal>
+                                        </rhs>
+                                    </BinaryExpr>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal evalType="int" type="INT">10</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="int" op="MULTI">
+                        <lhs>
+                            <BinaryExpr evalType="int" op="ADD">
+                                <lhs>
+                                    <Id evalType="int">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Id evalType="float">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <Literal evalType="int" type="INT">10</Literal>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="LOR">
+                        <lhs>
+                            <BinaryExpr evalType="bool" op="GT">
+                                <lhs>
+                                    <Id evalType="int">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Id evalType="float">b</Id>
+                                </rhs>
+                            </BinaryExpr>
+                        </lhs>
+                        <rhs>
+                            <BinaryExpr evalType="bool" op="LT">
+                                <lhs>
+                                    <Id evalType="int">a</Id>
+                                </lhs>
+                                <rhs>
+                                    <Literal evalType="int" type="INT">10</Literal>
+                                </rhs>
+                            </BinaryExpr>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <AssignExpr evalType="int">
+                        <assignee>
+                            <Id evalType="int">a</Id>
+                        </assignee>
+                        <value>
+                            <Literal evalType="int" type="INT">10</Literal>
+                        </value>
+                    </AssignExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="EQ">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="NEQ">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="GTE">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="LTE">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="GT">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <BinaryExpr evalType="bool" op="LT">
+                        <lhs>
+                            <Id evalType="int">a</Id>
+                        </lhs>
+                        <rhs>
+                            <Id evalType="float">b</Id>
+                        </rhs>
+                    </BinaryExpr>
+                </ExprStmt>
+                <ExprStmt>
+                    <UnaryExpr evalType="int" op="MINUS">
+                        <arg>
+                            <Id evalType="int">a</Id>
+                        </arg>
+                    </UnaryExpr>
+                </ExprStmt>
+            </Block>
+        </body>
+    </FuncDecl>
+</TranslationUnit>

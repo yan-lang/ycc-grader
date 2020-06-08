@@ -73,7 +73,10 @@ class ControlStructure:
 class CSReport(BaseReport):
 
     def __init__(self, grade_result, gold_css, stu_css):
-        self._grade = int(grade_result.count(True) / len(grade_result) * self.total_grade)
+        if len(grade_result) == 0:
+            self._grade = 100
+        else:
+            self._grade = int(grade_result.count(True) / len(grade_result) * self.total_grade)
         self.gold_css = gold_css
         self.stu_css = stu_css
         self.creation_date = datetime.datetime.now()
