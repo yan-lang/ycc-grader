@@ -118,7 +118,7 @@ class BaseGrader(Grader):
                 else:
                     reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
             except Exception as e:
-                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg + "\n\n" + e))
+                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg + "\n\n" + str(e)))
 
         return reports
 
