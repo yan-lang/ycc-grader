@@ -29,7 +29,7 @@ class NameResolveGrader(BaseGrader):
                     gold_name.passed = True
             result.append(passed)
 
-        return NameReport(result, gold_names, stu_names)
+        return NameReport(os.path.basename(gold_out), result, gold_names, stu_names)
 
     @staticmethod
     def _parse_(out_path):
@@ -91,7 +91,8 @@ class Def:
 
 class NameReport(BaseReport):
 
-    def __init__(self, grade_result, gold_names, stu_names):
+    def __init__(self, report_name, grade_result, gold_names, stu_names):
+        self._report_name = report_name
         self._grade = int(grade_result.count(True) / len(grade_result) * self.total_grade)
         self.gold_names = gold_names
         self.stu_names = stu_names
@@ -100,7 +101,7 @@ class NameReport(BaseReport):
 
     @property
     def report_name(self):
-        return "name resolve"
+        return "Name Resolve: " + self._report_name
 
     @property
     def total_grade(self):

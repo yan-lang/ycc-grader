@@ -29,7 +29,7 @@ class ControlStructureGrader(BaseGrader):
                     gold_cs.passed = True
             result.append(passed)
 
-        return CSReport(result, gold_css, stu_css)
+        return CSReport(os.path.basename(gold_out), result, gold_css, stu_css)
 
     @staticmethod
     def _parse_(out_path):
@@ -72,7 +72,8 @@ class ControlStructure:
 
 class CSReport(BaseReport):
 
-    def __init__(self, grade_result, gold_css, stu_css):
+    def __init__(self, report_name, grade_result, gold_css, stu_css):
+        self._report_name = report_name
         if len(grade_result) == 0:
             self._grade = 100
         else:
@@ -84,7 +85,7 @@ class CSReport(BaseReport):
 
     @property
     def report_name(self):
-        return "control structure analyze"
+        return "Control Structure Analyze: " + self._report_name
 
     @property
     def total_grade(self):

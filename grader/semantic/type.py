@@ -32,7 +32,7 @@ class TypeCheckReport(BaseReport):
 
     @property
     def report_name(self):
-        return self._report_name
+        return "TypeCheck: " + self._report_name
 
     @property
     def total_grade(self):
