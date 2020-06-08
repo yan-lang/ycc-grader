@@ -1,43 +1,43 @@
-<TranslationUnit from="0" to="40">
-    <FuncDecl from="0" to="16">
+<TranslationUnit>
+    <FuncDecl>
         <name>
-            <Id from="1" to="1">add</Id>
+            <Id>add</Id>
         </name>
         <returnType>
-            <Type from="0" to="0">INT</Type>
+            <PrimitiveType>INT</PrimitiveType>
         </returnType>
         <params>
             <param>
-                <VarDecl from="0" to="5">
+                <VarDecl>
                     <name>
-                        <Id from="4" to="4">a</Id>
+                        <Id>a</Id>
                     </name>
                     <type>
-                        <Type from="3" to="3">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                 </VarDecl>
             </param>
             <param>
-                <VarDecl from="0" to="8">
+                <VarDecl>
                     <name>
-                        <Id from="7" to="7">b</Id>
+                        <Id>b</Id>
                     </name>
                     <type>
-                        <Type from="6" to="6">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                 </VarDecl>
             </param>
         </params>
         <body>
-            <Block from="9" to="16">
-                <ReturnStmt from="10" to="15">
+            <Block>
+                <ReturnStmt>
                     <value>
-                        <BinaryExpr op="ADD" from="11" to="14">
+                        <BinaryExpr op="ADD">
                             <lhs>
-                                <Id from="12" to="12">a</Id>
+                                <Id>a</Id>
                             </lhs>
                             <rhs>
-                                <Id from="14" to="14">b</Id>
+                                <Id>b</Id>
                             </rhs>
                         </BinaryExpr>
                     </value>
@@ -45,51 +45,51 @@
             </Block>
         </body>
     </FuncDecl>
-    <FuncDecl from="16" to="40">
+    <FuncDecl>
         <name>
-            <Id from="17" to="17">main</Id>
+            <Id>main</Id>
         </name>
         <returnType>
-            <Type from="16" to="16">INT</Type>
+            <PrimitiveType>INT</PrimitiveType>
         </returnType>
         <params>
         </params>
         <body>
-            <Block from="20" to="40">
-                <VarDecl from="21" to="26">
+            <Block>
+                <VarDecl>
                     <name>
-                        <Id from="22" to="22">a</Id>
+                        <Id>a</Id>
                     </name>
                     <type>
-                        <Type from="21" to="21">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal from="25" to="25" type="INT">10</Literal>
+                        <Literal type="INT">10</Literal>
                     </init>
                 </VarDecl>
-                <VarDecl from="26" to="31">
+                <VarDecl>
                     <name>
-                        <Id from="27" to="27">b</Id>
+                        <Id>b</Id>
                     </name>
                     <type>
-                        <Type from="26" to="26">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal from="30" to="30" type="INT">9</Literal>
+                        <Literal type="INT">9</Literal>
                     </init>
                 </VarDecl>
-                <ReturnStmt from="31" to="39">
+                <ReturnStmt>
                     <value>
-                        <FunCall from="32" to="38">
+                        <FunCall>
                             <funcName>
-                                <Id from="33" to="33">add</Id>
+                                <Id>add</Id>
                             </funcName>
                             <args>
                                 <arg>
-                                    <Id from="35" to="35">a</Id>
+                                    <Id>a</Id>
                                 </arg>
                                 <arg>
-                                    <Id from="37" to="37">b</Id>
+                                    <Id>b</Id>
                                 </arg>
                             </args>
                         </FunCall>

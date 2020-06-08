@@ -1,0 +1,10 @@
+grant codeBase "file:${{java.ext.dirs}}/*" {
+	permission java.security.AllPermission;
+};
+
+grant {
+    permission java.util.PropertyPermission "*", "read, write";
+    permission java.lang.RuntimePermission "*";
+    permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+    permission java.io.FilePermission "../public/code/lexer/*", "read, write";
+};

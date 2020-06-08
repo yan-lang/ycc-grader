@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import pathlib
 
 from .report import ErrorReport, BaseReport
 from .util import remove_extension, check_extension, load_json
@@ -22,9 +23,9 @@ class Runner:
         self.output_extension = output_extension
         self.logger = logger
 
+        policy_file = os.path.join(pathlib.Path(__file__).parent.absolute(), 'judge.policy')
         self.vm_args = ['--enable-preview', '-jar']
-        # self.runner.extend(['-Djava.security.manager'])
-        # self.runner.extend(['-Djava.security.policy==myapp.policy'])
+        # self.vm_args += ['-Djava.security.manager', '-Djava.security.policy=' + policy_file]
 
     def _cmd_(self, app_path, app_args):
         return ['java'] + self.vm_args + [app_path] + app_args

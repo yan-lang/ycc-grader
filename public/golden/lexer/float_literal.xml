@@ -1,7 +1,8 @@
 <tokens>
     <token>
         <index>0</index>
-        <type>FLOAT_LIT</type>
+        <text>3.145</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>3.145</value>
@@ -12,7 +13,8 @@
     </token>
     <token>
         <index>1</index>
-        <type>FLOAT_LIT</type>
+        <text>3.0</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>3.0</value>
@@ -23,7 +25,8 @@
     </token>
     <token>
         <index>2</index>
-        <type>FLOAT_LIT</type>
+        <text>9.81235642</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>9.812356</value>
@@ -34,7 +37,8 @@
     </token>
     <token>
         <index>3</index>
-        <type>FLOAT_LIT</type>
+        <text>132315.134</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>132315.14</value>
@@ -45,7 +49,8 @@
     </token>
     <token>
         <index>4</index>
-        <type>FLOAT_LIT</type>
+        <text>321566132.222</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>3.21566144E8</value>
@@ -56,7 +61,8 @@
     </token>
     <token>
         <index>5</index>
-        <type>FLOAT_LIT</type>
+        <text>123.1000012</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>123.1</value>
@@ -67,7 +73,8 @@
     </token>
     <token>
         <index>6</index>
-        <type>FLOAT_LIT</type>
+        <text>0.001324</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>0.001324</value>
@@ -78,7 +85,8 @@
     </token>
     <token>
         <index>7</index>
-        <type>FLOAT_LIT</type>
+        <text>0.1230012</text>
+        <type>float literal</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>
         <value>0.1230012</value>
@@ -89,6 +97,7 @@
     </token>
     <token>
         <index>8</index>
+        <text></text>
         <type>EOF</type>
         <source>float_literal.c</source>
         <lexer>Lexer</lexer>

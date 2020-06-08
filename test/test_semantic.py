@@ -37,7 +37,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_semantic_grader(self):
         grader = SemanticGrader('../public/code/semantic', '../public/golden/semantic')
-        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies.jar')
+        reports = grader.grade('../solution/yan-ycc-impl-1.0-SNAPSHOT-jar-with-dependencies-good.jar')
         for report in reports:
             print(report.detail)
 

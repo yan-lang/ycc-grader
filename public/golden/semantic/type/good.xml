@@ -1,87 +1,87 @@
-<TranslationUnit from="0" to="39">
-    <FuncDecl from="0" to="39">
+<TranslationUnit>
+    <FuncDecl>
         <name>
-            <Id from="1" to="1">main</Id>
+            <Id>main</Id>
         </name>
         <returnType>
-            <PrimitiveType from="0" to="0">INT</PrimitiveType>
+            <PrimitiveType>INT</PrimitiveType>
         </returnType>
         <params>
         </params>
         <body>
-            <Block from="4" to="39">
-                <VarDecl from="5" to="10">
+            <Block>
+                <VarDecl>
                     <name>
-                        <Id from="6" to="6">a</Id>
+                        <Id>a</Id>
                     </name>
                     <type>
-                        <PrimitiveType from="5" to="5">INT</PrimitiveType>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal evalType="int" from="9" to="9" type="INT">10</Literal>
+                        <Literal evalType="int" type="INT">10</Literal>
                     </init>
                 </VarDecl>
-                <VarDecl from="10" to="15">
+                <VarDecl>
                     <name>
-                        <Id from="11" to="11">b</Id>
+                        <Id>b</Id>
                     </name>
                     <type>
-                        <PrimitiveType from="10" to="10">FLOAT</PrimitiveType>
+                        <PrimitiveType>FLOAT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal evalType="int" from="14" to="14" type="INT">9</Literal>
+                        <Literal evalType="int" type="INT">9</Literal>
                     </init>
                 </VarDecl>
-                <IfStmt from="15" to="38">
+                <IfStmt>
                     <cond>
-                        <BinaryExpr evalType="bool" op="GT" from="17" to="20">
+                        <BinaryExpr evalType="bool" op="GT">
                             <lhs>
-                                <Id evalType="int" from="18" to="18">a</Id>
+                                <Id evalType="int">a</Id>
                             </lhs>
                             <rhs>
-                                <Literal evalType="int" from="20" to="20" type="INT">0</Literal>
+                                <Literal evalType="int" type="INT">0</Literal>
                             </rhs>
                         </BinaryExpr>
                     </cond>
                     <thenBody>
-                        <Block from="21" to="29">
-                            <ExprStmt from="22" to="28">
-                                <BinaryExpr evalType="int" op="ASSIGN" from="22" to="27">
-                                    <lhs>
-                                        <Id evalType="int" from="23" to="23">a</Id>
-                                    </lhs>
-                                    <rhs>
-                                        <BinaryExpr evalType="int" op="ADD" from="24" to="27">
+                        <Block>
+                            <ExprStmt>
+                                <AssignExpr evalType="int">
+                                    <assignee>
+                                        <Id evalType="int">a</Id>
+                                    </assignee>
+                                    <value>
+                                        <BinaryExpr evalType="int" op="ADD">
                                             <lhs>
-                                                <Id evalType="int" from="25" to="25">a</Id>
+                                                <Id evalType="int">a</Id>
                                             </lhs>
                                             <rhs>
-                                                <Id evalType="float" from="27" to="27">b</Id>
+                                                <Id evalType="float">b</Id>
                                             </rhs>
                                         </BinaryExpr>
-                                    </rhs>
-                                </BinaryExpr>
+                                    </value>
+                                </AssignExpr>
                             </ExprStmt>
                         </Block>
                     </thenBody>
                     <elseBody>
-                        <Block from="30" to="38">
-                            <ExprStmt from="31" to="37">
-                                <BinaryExpr evalType="float" op="ASSIGN" from="31" to="36">
-                                    <lhs>
-                                        <Id evalType="float" from="32" to="32">b</Id>
-                                    </lhs>
-                                    <rhs>
-                                        <BinaryExpr evalType="int" op="ADD" from="33" to="36">
+                        <Block>
+                            <ExprStmt>
+                                <AssignExpr evalType="float">
+                                    <assignee>
+                                        <Id evalType="float">b</Id>
+                                    </assignee>
+                                    <value>
+                                        <BinaryExpr evalType="int" op="ADD">
                                             <lhs>
-                                                <Id evalType="int" from="34" to="34">a</Id>
+                                                <Id evalType="int">a</Id>
                                             </lhs>
                                             <rhs>
-                                                <Id evalType="float" from="36" to="36">b</Id>
+                                                <Id evalType="float">b</Id>
                                             </rhs>
                                         </BinaryExpr>
-                                    </rhs>
-                                </BinaryExpr>
+                                    </value>
+                                </AssignExpr>
                             </ExprStmt>
                         </Block>
                     </elseBody>

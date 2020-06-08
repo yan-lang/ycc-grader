@@ -1,107 +1,107 @@
-<TranslationUnit from="0" to="43">
-    <FuncDecl from="0" to="43">
+<TranslationUnit>
+    <FuncDecl>
         <name>
-            <Id from="1" to="1">main</Id>
+            <Id>main</Id>
         </name>
         <returnType>
-            <Type from="0" to="0">INT</Type>
+            <PrimitiveType>INT</PrimitiveType>
         </returnType>
         <params>
         </params>
         <body>
-            <Block from="4" to="43">
-                <VarDecl from="5" to="10">
+            <Block>
+                <VarDecl>
                     <name>
-                        <Id from="6" to="6">a</Id>
+                        <Id>a</Id>
                     </name>
                     <type>
-                        <Type from="5" to="5">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal from="9" to="9" type="INT">10</Literal>
+                        <Literal type="INT">10</Literal>
                     </init>
                 </VarDecl>
-                <VarDecl from="10" to="13">
+                <VarDecl>
                     <name>
-                        <Id from="11" to="11">c</Id>
+                        <Id>c</Id>
                     </name>
                     <type>
-                        <Type from="10" to="10">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                 </VarDecl>
-                <VarDecl from="13" to="22">
+                <VarDecl>
                     <name>
-                        <Id from="14" to="14">d</Id>
+                        <Id>d</Id>
                     </name>
                     <type>
-                        <Type from="13" to="13">INT</Type>
+                        <PrimitiveType>INT</PrimitiveType>
                     </type>
                     <init>
-                        <BinaryExpr op="ADD" from="16" to="21">
+                        <BinaryExpr op="ADD">
                             <lhs>
-                                <BinaryExpr op="MULTI" from="16" to="19">
+                                <BinaryExpr op="MULTI">
                                     <lhs>
-                                        <Literal from="17" to="17" type="INT">9</Literal>
+                                        <Literal type="INT">9</Literal>
                                     </lhs>
                                     <rhs>
-                                        <Literal from="19" to="19" type="INT">10</Literal>
+                                        <Literal type="INT">10</Literal>
                                     </rhs>
                                 </BinaryExpr>
                             </lhs>
                             <rhs>
-                                <Literal from="21" to="21" type="INT">0</Literal>
+                                <Literal type="INT">0</Literal>
                             </rhs>
                         </BinaryExpr>
                     </init>
                 </VarDecl>
-                <VarDecl from="22" to="25">
+                <VarDecl>
                     <name>
-                        <Id from="23" to="23">f</Id>
+                        <Id>f</Id>
                     </name>
                     <type>
-                        <Type from="22" to="22">FLOAT</Type>
+                        <PrimitiveType>FLOAT</PrimitiveType>
                     </type>
                 </VarDecl>
-                <VarDecl from="25" to="28">
+                <VarDecl>
                     <name>
-                        <Id from="26" to="26">e</Id>
+                        <Id>e</Id>
                     </name>
                     <type>
-                        <Type from="25" to="25">FLOAT</Type>
+                        <PrimitiveType>FLOAT</PrimitiveType>
                     </type>
                 </VarDecl>
-                <VarDecl from="28" to="33">
+                <VarDecl>
                     <name>
-                        <Id from="29" to="29">abc</Id>
+                        <Id>abc</Id>
                     </name>
                     <type>
-                        <Type from="28" to="28">FLOAT</Type>
+                        <PrimitiveType>FLOAT</PrimitiveType>
                     </type>
                     <init>
-                        <Literal from="32" to="32" type="FLOAT">10.2</Literal>
+                        <Literal type="FLOAT">10.2</Literal>
                     </init>
                 </VarDecl>
-                <VarDecl from="33" to="42">
+                <VarDecl>
                     <name>
-                        <Id from="34" to="34">abe</Id>
+                        <Id>abe</Id>
                     </name>
                     <type>
-                        <Type from="33" to="33">FLOAT</Type>
+                        <PrimitiveType>FLOAT</PrimitiveType>
                     </type>
                     <init>
-                        <BinaryExpr op="ADD" from="36" to="41">
+                        <BinaryExpr op="ADD">
                             <lhs>
-                                <BinaryExpr op="ADD" from="36" to="39">
+                                <BinaryExpr op="ADD">
                                     <lhs>
-                                        <Literal from="37" to="37" type="FLOAT">20.5</Literal>
+                                        <Literal type="FLOAT">20.5</Literal>
                                     </lhs>
                                     <rhs>
-                                        <Literal from="39" to="39" type="FLOAT">13.222</Literal>
+                                        <Literal type="FLOAT">13.222</Literal>
                                     </rhs>
                                 </BinaryExpr>
                             </lhs>
                             <rhs>
-                                <Literal from="41" to="41" type="FLOAT">0.8</Literal>
+                                <Literal type="FLOAT">0.8</Literal>
                             </rhs>
                         </BinaryExpr>
                     </init>

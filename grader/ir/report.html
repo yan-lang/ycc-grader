@@ -1,0 +1,14 @@
+Lexer Grading Report
+--------------------
+Date: {{ date }}
+File: {{ file_name }}
+Preview:
+    - correct:           {{ correct_num }}/{{ total }}
+    - wrong answer:      {{ wa_num }}/{{ total }}
+    - timeout:           {{ timeout_num }}/{{ total }}
+    - runtime error:     {{ re_num }}/{{ total }}
+
+Detail:
+{% for msg in msgs %}
+    - {{ msg }}
+{% endfor %}

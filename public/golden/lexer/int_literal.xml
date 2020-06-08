@@ -1,7 +1,8 @@
 <tokens>
     <token>
         <index>0</index>
-        <type>INT_LIT</type>
+        <text>123452</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>123452</value>
@@ -12,7 +13,8 @@
     </token>
     <token>
         <index>1</index>
-        <type>INT_LIT</type>
+        <text>4531</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>4531</value>
@@ -23,7 +25,8 @@
     </token>
     <token>
         <index>2</index>
-        <type>INT_LIT</type>
+        <text>1234123</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>1234123</value>
@@ -34,7 +37,8 @@
     </token>
     <token>
         <index>3</index>
-        <type>INT_LIT</type>
+        <text>0</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>0</value>
@@ -45,7 +49,8 @@
     </token>
     <token>
         <index>4</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -56,7 +61,8 @@
     </token>
     <token>
         <index>5</index>
-        <type>INT_LIT</type>
+        <text>1234</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>1234</value>
@@ -67,7 +73,8 @@
     </token>
     <token>
         <index>6</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -78,7 +85,8 @@
     </token>
     <token>
         <index>7</index>
-        <type>INT_LIT</type>
+        <text>123466</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>123466</value>
@@ -89,7 +97,8 @@
     </token>
     <token>
         <index>8</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -100,7 +109,8 @@
     </token>
     <token>
         <index>9</index>
-        <type>INT_LIT</type>
+        <text>1233</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>1233</value>
@@ -111,7 +121,8 @@
     </token>
     <token>
         <index>10</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -122,7 +133,8 @@
     </token>
     <token>
         <index>11</index>
-        <type>INT_LIT</type>
+        <text>123456</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>123456</value>
@@ -133,7 +145,8 @@
     </token>
     <token>
         <index>12</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -144,7 +157,8 @@
     </token>
     <token>
         <index>13</index>
-        <type>INT_LIT</type>
+        <text>9876</text>
+        <type>integer literal</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>
         <value>9876</value>
@@ -155,6 +169,7 @@
     </token>
     <token>
         <index>14</index>
+        <text></text>
         <type>EOF</type>
         <source>int_literal.c</source>
         <lexer>Lexer</lexer>

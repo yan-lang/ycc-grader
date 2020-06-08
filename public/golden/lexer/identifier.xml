@@ -1,7 +1,8 @@
 <tokens>
     <token>
         <index>0</index>
-        <type>IDENTIFIER</type>
+        <text>apple</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>apple</value>
@@ -12,7 +13,8 @@
     </token>
     <token>
         <index>1</index>
-        <type>IDENTIFIER</type>
+        <text>_apple</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>_apple</value>
@@ -23,7 +25,8 @@
     </token>
     <token>
         <index>2</index>
-        <type>IDENTIFIER</type>
+        <text>__apple</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>__apple</value>
@@ -34,7 +37,8 @@
     </token>
     <token>
         <index>3</index>
-        <type>IDENTIFIER</type>
+        <text>____appple___</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>____appple___</value>
@@ -45,7 +49,8 @@
     </token>
     <token>
         <index>4</index>
-        <type>IDENTIFIER</type>
+        <text>_apple_apple_</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>_apple_apple_</value>
@@ -56,7 +61,8 @@
     </token>
     <token>
         <index>5</index>
-        <type>IDENTIFIER</type>
+        <text>a_pple</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>a_pple</value>
@@ -67,7 +73,8 @@
     </token>
     <token>
         <index>6</index>
-        <type>IDENTIFIER</type>
+        <text>a__apple</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>a__apple</value>
@@ -78,7 +85,8 @@
     </token>
     <token>
         <index>7</index>
-        <type>IDENTIFIER</type>
+        <text>apple123</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>apple123</value>
@@ -89,7 +97,8 @@
     </token>
     <token>
         <index>8</index>
-        <type>IDENTIFIER</type>
+        <text>int1234</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>int1234</value>
@@ -100,7 +109,8 @@
     </token>
     <token>
         <index>9</index>
-        <type>IDENTIFIER</type>
+        <text>_int</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>_int</value>
@@ -111,7 +121,8 @@
     </token>
     <token>
         <index>10</index>
-        <type>IDENTIFIER</type>
+        <text>_i12345</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>_i12345</value>
@@ -122,7 +133,8 @@
     </token>
     <token>
         <index>11</index>
-        <type>IDENTIFIER</type>
+        <text>in12344t</text>
+        <type>identifier</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>
         <value>in12344t</value>
@@ -133,6 +145,7 @@
     </token>
     <token>
         <index>12</index>
+        <text></text>
         <type>EOF</type>
         <source>identifier.c</source>
         <lexer>Lexer</lexer>

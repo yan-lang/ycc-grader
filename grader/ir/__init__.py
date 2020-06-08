@@ -1,6 +1,10 @@
+import datetime
 import logging
 import os
 import subprocess
+from pathlib import Path
+
+from jinja2 import Template
 
 from ..common import BaseReport, Grader, check_extension, listdirpath
 
@@ -51,6 +55,7 @@ class IRGrader(Grader):
                 elif stdout.strip() != output_data.strip():
                     report.msgs.append(input_basename + " fail(wrong answer)")
                 else:
+                    report.msgs.append(input_basename + " passed")
                     report.num_passed += 1
             except subprocess.TimeoutExpired:
                 p.kill()
@@ -70,9 +75,13 @@ class IRReport(BaseReport):
 
     def __init__(self, report_name):
         self._report_name = report_name
+        self.creation_date = datetime.datetime.now()
         self.msgs = []
         self.num_test_cases = 0
         self.num_passed = 0
+        self.wa_num = 0
+        self.timeout_num = 0
+        self.re_num = 0
 
     @property
     def report_name(self):
@@ -88,7 +97,16 @@ class IRReport(BaseReport):
 
     @property
     def detail(self):
-        return "\n".join(self.msgs)
+        with open(os.path.join(Path(__file__).parent.absolute(), 'report.html'), 'r') as f:
+            template = Template(f.read(), lstrip_blocks=True, trim_blocks=True)
+            return template.render(date=self.creation_date,
+                                   file_name=self._report_name,
+                                   correct_num=self.num_passed,
+                                   total=self.num_test_cases,
+                                   wa_num=self.wa_num,
+                                   timeout_num=self.timeout_num,
+                                   re_num=self.re_num,
+                                   msgs=self.msgs)
 
     def __str__(self):
         return "{0}[{1}/{2}]: {3}".format(self.report_name, self.grade, self.total_grade, self.detail)

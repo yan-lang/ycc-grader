@@ -1,7 +1,8 @@
 <tokens>
     <token>
         <index>0</index>
-        <type>ADD</type>
+        <text>+</text>
+        <type>add</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -12,7 +13,8 @@
     </token>
     <token>
         <index>1</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -23,7 +25,8 @@
     </token>
     <token>
         <index>2</index>
-        <type>MULTI</type>
+        <text>*</text>
+        <type>multiply</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -34,7 +37,8 @@
     </token>
     <token>
         <index>3</index>
-        <type>DIV</type>
+        <text>/</text>
+        <type>divide</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -45,7 +49,8 @@
     </token>
     <token>
         <index>4</index>
-        <type>GT</type>
+        <text>&gt;</text>
+        <type>greater than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -56,7 +61,8 @@
     </token>
     <token>
         <index>5</index>
-        <type>GTE</type>
+        <text>&gt;=</text>
+        <type>greater than or equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -67,7 +73,8 @@
     </token>
     <token>
         <index>6</index>
-        <type>GT</type>
+        <text>&gt;</text>
+        <type>greater than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -78,7 +85,8 @@
     </token>
     <token>
         <index>7</index>
-        <type>LT</type>
+        <text>&lt;</text>
+        <type>less than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -89,7 +97,8 @@
     </token>
     <token>
         <index>8</index>
-        <type>LTE</type>
+        <text>&lt;=</text>
+        <type>less than or equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -100,7 +109,8 @@
     </token>
     <token>
         <index>9</index>
-        <type>EQ</type>
+        <text>==</text>
+        <type>equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -111,7 +121,8 @@
     </token>
     <token>
         <index>10</index>
-        <type>UNKNOWN</type>
+        <text>!</text>
+        <type>logical not</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -122,7 +133,8 @@
     </token>
     <token>
         <index>11</index>
-        <type>LPAREN</type>
+        <text>(</text>
+        <type>left parenthesis</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -133,7 +145,8 @@
     </token>
     <token>
         <index>12</index>
-        <type>RPAREN</type>
+        <text>)</text>
+        <type>right parenthesis</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -144,7 +157,8 @@
     </token>
     <token>
         <index>13</index>
-        <type>LBRACE</type>
+        <text>{</text>
+        <type>left brace</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -155,7 +169,8 @@
     </token>
     <token>
         <index>14</index>
-        <type>RBRACE</type>
+        <text>}</text>
+        <type>right brace</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -166,7 +181,8 @@
     </token>
     <token>
         <index>15</index>
-        <type>SEMICOLON</type>
+        <text>;</text>
+        <type>semicolon</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -177,7 +193,8 @@
     </token>
     <token>
         <index>16</index>
-        <type>COMMA</type>
+        <text>,</text>
+        <type>comma</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -188,7 +205,8 @@
     </token>
     <token>
         <index>17</index>
-        <type>ADD</type>
+        <text>+</text>
+        <type>add</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -199,7 +217,8 @@
     </token>
     <token>
         <index>18</index>
-        <type>MINUS</type>
+        <text>-</text>
+        <type>minus</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -210,7 +229,8 @@
     </token>
     <token>
         <index>19</index>
-        <type>MULTI</type>
+        <text>*</text>
+        <type>multiply</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -221,7 +241,8 @@
     </token>
     <token>
         <index>20</index>
-        <type>DIV</type>
+        <text>/</text>
+        <type>divide</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -232,7 +253,8 @@
     </token>
     <token>
         <index>21</index>
-        <type>GT</type>
+        <text>&gt;</text>
+        <type>greater than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -243,7 +265,8 @@
     </token>
     <token>
         <index>22</index>
-        <type>GTE</type>
+        <text>&gt;=</text>
+        <type>greater than or equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -254,7 +277,8 @@
     </token>
     <token>
         <index>23</index>
-        <type>GT</type>
+        <text>&gt;</text>
+        <type>greater than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -265,7 +289,8 @@
     </token>
     <token>
         <index>24</index>
-        <type>LT</type>
+        <text>&lt;</text>
+        <type>less than</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -276,7 +301,8 @@
     </token>
     <token>
         <index>25</index>
-        <type>LTE</type>
+        <text>&lt;=</text>
+        <type>less than or equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -287,7 +313,8 @@
     </token>
     <token>
         <index>26</index>
-        <type>EQ</type>
+        <text>==</text>
+        <type>equal</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -298,7 +325,8 @@
     </token>
     <token>
         <index>27</index>
-        <type>UNKNOWN</type>
+        <text>!</text>
+        <type>logical not</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -309,7 +337,8 @@
     </token>
     <token>
         <index>28</index>
-        <type>LPAREN</type>
+        <text>(</text>
+        <type>left parenthesis</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -320,7 +349,8 @@
     </token>
     <token>
         <index>29</index>
-        <type>RPAREN</type>
+        <text>)</text>
+        <type>right parenthesis</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -331,7 +361,8 @@
     </token>
     <token>
         <index>30</index>
-        <type>LBRACE</type>
+        <text>{</text>
+        <type>left brace</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -342,7 +373,8 @@
     </token>
     <token>
         <index>31</index>
-        <type>RBRACE</type>
+        <text>}</text>
+        <type>right brace</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -353,7 +385,8 @@
     </token>
     <token>
         <index>32</index>
-        <type>SEMICOLON</type>
+        <text>;</text>
+        <type>semicolon</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -364,7 +397,8 @@
     </token>
     <token>
         <index>33</index>
-        <type>COMMA</type>
+        <text>,</text>
+        <type>comma</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
         <value>null</value>
@@ -375,6 +409,7 @@
     </token>
     <token>
         <index>34</index>
+        <text></text>
         <type>EOF</type>
         <source>punctuator.c</source>
         <lexer>Lexer</lexer>
