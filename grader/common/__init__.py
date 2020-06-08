@@ -112,10 +112,13 @@ class BaseGrader(Grader):
             stu_out_path = os.path.join(lex_out_dir, out_name)
             gold_out_path = os.path.join(self.test_gold_dir, out_name)
 
-            if os.path.exists(stu_out_path) and os.path.exists(gold_out_path):
-                reports.append(self.grade_single(stu_out_path, gold_out_path))
-            else:
-                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
+            try:
+                if os.path.exists(stu_out_path) and os.path.exists(gold_out_path):
+                    reports.append(self.grade_single(stu_out_path, gold_out_path))
+                else:
+                    reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg))
+            except Exception as e:
+                reports.append(ErrorReport(out_name, BaseReport.TOTAL_GRADE, msg + "\n\n" + e))
 
         return reports
 
