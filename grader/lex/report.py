@@ -90,7 +90,7 @@ class LexerReport(BaseReport):
 
     @property
     def grade(self):
-        return self.total_grade * (self.correct_num / len(self.stu_tokens))
+        return int(self.total_grade * (self.correct_num / len(self.stu_tokens)))
 
     @property
     def total_grade(self):
